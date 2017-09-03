@@ -1,0 +1,67 @@
+	#muse_css_mq
+	{
+		background-color: #FFFFFF;
+	}
+
+	#bp_infinity.active
+	{
+		display: block;
+	}
+
+	#page
+	{
+		max-width: 1366px;
+	}
+
+	#pu230-4
+	{
+		width: 39.98%;
+		margin-left: 22.85%;
+	}
+
+	#u230-4
+	{
+		width: 31.32%;
+		left: 24.91%;
+	}
+
+	#u247-4
+	{
+		color: #00FF00;
+		font-style: normal;
+		width: 28.58%;
+		left: 71.43%;
+	}
+
+	#u235-4
+	{
+		color: #FF0000;
+		font-style: normal;
+		width: 30.22%;
+	}
+
+	#u241-4
+	{
+		color: #FBB03B;
+		font-style: normal;
+		width: 34.99%;
+		left: 48.72%;
+	}
+
+	#u127
+	{
+		margin-top: 1862px;
+		width: 39.17%;
+		margin-left: 18.38%;
+	}
+
+	.css_verticalspacer .verticalspacer
+	{
+		height: calc(100vh - 2699px);
+	}
+
+	.html
+	{
+		background-image: url("../images/dubaigrad.jpg?crc=153487364");
+	}
+

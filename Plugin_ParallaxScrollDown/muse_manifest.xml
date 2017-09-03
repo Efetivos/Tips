@@ -1,0 +1,22 @@
+<manifest alg="2" build="2017.0.1.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="oi.oi" resolutions="1x" timestamp="1497114954655">
+  <folder name="css">
+    <file name="site_global.css" crc="3765861665"/>
+    <file name="index.css" crc="4242725793" ref="index"/>
+    <file name="nomq_index.css" crc="3928495174" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4148063285" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="4179431180" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4001026563" ref="index"/>
+    <file name="jquery.watch.js" crc="437028206" ref="index"/>
+    <file name="require.js" crc="4159430777" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="3991890305" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="dubaigrad.jpg" crc="153487364" ref="index"/>
+    <file name="dubaigrad640x396.jpg" crc="4230970539" ref="index"/>
+  </folder>
+  <file name="index.html" crc="3921893414" seo="true" mt="1497114948543" redirect="true"/>
+</manifest>

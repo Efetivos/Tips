@@ -1,0 +1,27 @@
+<manifest alg="2" build="2017.0.1.363" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="oi.oi" resolutions="1x" timestamp="1493686235633">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="index.css" crc="3893865599" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="4148063285" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="4179431180" ref="index"/>
+    <file name="jquery.watch.js" crc="437028206" ref="index"/>
+    <file name="require.js" crc="4159430777" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="05-fidelidade.jpg" crc="3838062336" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-10.png" crc="3985361667" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-12.jpg" crc="3996252733" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-32.png" crc="4088963564" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-33.png" crc="482014582" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-37.png" crc="386704573" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-37-2.png" crc="3804511208" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-39.png" crc="401077740" seo="true" ref="index"/>
+    <file name="barbearia-black-barba-43.png" crc="193340098" seo="true" ref="index"/>
+    <file name="embreve.jpg" crc="397155503" seo="true" ref="index"/>
+  </folder>
+  <file name="index.html" crc="431220342" seo="true" mt="1493686197806" redirect="true"/>
+</manifest>

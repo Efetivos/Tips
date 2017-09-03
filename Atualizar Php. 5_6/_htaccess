@@ -1,0 +1,14 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /galeria/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /galeria/index.php [L]
+AddHandler php56-script .php
+suPHP_ConfigPath /home/buffetoliveira/
+</IfModule>
+
+# END WordPress

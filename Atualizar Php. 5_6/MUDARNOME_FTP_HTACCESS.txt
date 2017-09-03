@@ -1,0 +1,10 @@
+***** Aloque no diretório public_html de sua hospedagem um arquivo chamado .htaccess com o seguinte conteúdo: 
+AddHandler php56-script .php
+suPHP_ConfigPath /home/SeuLoginDeFTP/
+
+
+***** No arquivo php.ini localize a linha extension_dir = "/usr/lib/php/modules/" e a substitua por:
+extension_dir = "/usr/lib64/php56/modules/"
+Desabilite as diretivas register_globals e register_long_arrays:
+register_globals = Off
+register_long_arrays = Off
