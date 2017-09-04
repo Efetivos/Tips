@@ -1,4 +1,15 @@
+
+
+	
 TweenMax.set('.ctn-desc',{autoAlpha:0})
+
+var tlInitSobre = new TimelineMax()
+	.from('#photo-efetivos',1.5,{height:0,ease:Power3.easeInOut})
+	.from('.option',0.001,{display:"none"},0)	
+ 	.staggerFrom(".somos,.number",.8, {autoAlpha:0, y:200},0.1,0)
+	.staggerFrom(".option",.8, {x:-700, ease:Power2.easeOut},0.05,'-=0.9')
+
+
 var tlHoverweb = new TimelineMax ({paused:true})
 	.from('#gig-web', 1.5,{x: -400, autoAlpha:0, ease: Power4.easeOut}).addPause().add('exit')
 	.to('#gig-web',.1, {autoAlpha:0})

@@ -56,9 +56,15 @@ a {
 }
 /*Init Project*/
 
+.somos {
+	position: absolute;
+	margin: 20vh 0 0 7vw;
+	color: #fff;
+	font-size: 23px;
+}
 .ctnr-options {
 	position: absolute;
-	margin-top: 20vh;
+	margin-top: 25vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
