@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TEST GSAP</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<style type="text/css">
+
+body{
+	margin: 0;
+	overflow: hidden;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	background-color: aqua;
+	cursor: crosshair;
+}
+
+.box {
+	position: absolute;
+	margin: 10% 0 0 50%;
+	width: 25%;
+	height: 90%;
+	background-color: grey;
+
+}
+
+.boxL {
+	width: 70%;
+	height: 100%;
+	background: url(http://www.stoida.com/insects/fly/fly3.jpg) center no-repeat;
+	background-size: cover;
+	left: 0px;
+	position: absolute;
+	cursor: url(https://cdn-skin.plie.com.br/frontend/plie/default/images/close_search.png), auto;
+}
+
+.boxR {
+	width: 45%;
+	height: 100%;
+	background: url(https://i.ytimg.com/vi/kPiqHGiCDS0/maxresdefault.jpg) center no-repeat;
+	background-size: cover;
+	right: 0px;
+	position: absolute;
+	cursor: url(https://cdn-skin.plie.com.br/frontend/plie/default/images/close_search.png), auto;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="box"></div>
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+	var tween = new TimelineMax()
+	.to(".box", 1.8, {css:{className:"boxL"}, ease: Power4.easeIn})
+	.to(".box", 1.8, {css:{className:"boxR"}, delay: 1.5, ease: Power4.easeIn});
+
+</script>
+
+</script>
+</html>
