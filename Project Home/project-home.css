@@ -110,13 +110,62 @@ table {
 	font-size: 800px;
 	font-weight: 900;
 	letter-spacing: -40px;
-    right: 0vw;
-	color: #171717;
-	
+    left: 0;
+	color: #171717;	
 	
 }
 
+.box-service {
+	position: absolute;
+	width: 50vw;
+	height: 90vh;
+	right: 0;
+	overflow: hidden;
+	opacity: 0.8;
+}
 
+.photo {
+	width: 100%;
+	height: 100%;
+	
+}
+#photo-efetivos {
+	background: url(images/photoSobre.jpg)no-repeat;
+	background-size: cover;
+	
+}
+#photo-web {
+	background: url(images/websites.png) center no-repeat;
+	background-size: cover;
+	
+}
+
+#photo-vid {
+	background: url(images/edicaovideo.png) center no-repeat;
+	background-size: cover;
+	
+}
+
+#photo-mid {
+	background: url(images/sociais.png)center no-repeat;
+	background-size: cover;
+	
+}
+
+#photo-des {
+	background: url(images/design-grafico.png)center no-repeat;
+	background-size: cover;
+	
+}
+.trg-close {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 30px;
+	left: 30px;
+	background-color: grey;
+	cursor: pointer;
+}
 
 
 
