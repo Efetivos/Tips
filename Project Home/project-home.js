@@ -1,4 +1,4 @@
-
+TweenMax.set('.ctn-desc',{autoAlpha:0})
 var tlHoverweb = new TimelineMax ({paused:true})
 	.from('#gig-web', 1.5,{x: -400, autoAlpha:0, ease: Power4.easeOut}).addPause().add('exit')
 	.to('#gig-web',.1, {autoAlpha:0})
@@ -60,6 +60,7 @@ $('#opt-des').mouseleave(function (){
 
 
 	var tlHoverPweb = new TimelineMax ({paused:true})
+	.to('#ctn-web',0.001,{autoAlpha:1})
 	.set('.title-gig',{display:"none"})
 	.to('#photo-efetivos',1.5,{height:0, right:0, ease: Power4.easeIn})
 	.to('body',1,{backgroundColor:"#f2f2f2"},0)
@@ -83,6 +84,7 @@ $('#trg-web').click(function (){
 
 
 	var tlHoverPvid = new TimelineMax ({paused:true})
+	.to('#ctn-vid',0.001,{autoAlpha:1})
 	.set('.title-gig',{display:"none"})
 	.to('#photo-efetivos',1.5,{height:0, right:0, ease: Power4.easeIn})
 	.to('body',1,{backgroundColor:"#f2f2f2"},0)
@@ -106,6 +108,7 @@ $('#trg-vid').click(function (){
 
 
 	var tlHoverPmid = new TimelineMax ({paused:true})
+	.to('#ctn-mid',0.001,{autoAlpha:1})
 	.set('.title-gig',{display:"none"})
 	.to('#photo-efetivos',1.5,{height:0, right:0, ease: Power4.easeIn})
 	.to('body',1,{backgroundColor:"#f2f2f2"},0)
@@ -113,7 +116,7 @@ $('#trg-vid').click(function (){
 	.from('#photo-mid', 1.5,{height: 0, ease: Power3.easeInOut},'-=1.5')
 	.from('#serv-mid', 1,{y:65},'-=.8')
 	.from('#desc-mid', 1,{y:165},'-=.8')
-	.from('#a-mid', 1,{autoAlpha:0, y:50},'-=.6')
+	.from('#a-mid', 1,{autoAlpha:0},'-=.6')
 	.from('#trg-mid',1,{autoAlpha:0});
 
 $('#opt-mid').click(function (){
@@ -129,6 +132,7 @@ $('#trg-mid').click(function (){
 
 
 	var tlHoverPdes = new TimelineMax ({paused:true})
+	.to('#ctn-des',0.001,{autoAlpha:1})
 	.set('.title-gig',{display:"none"})
 	.to('#photo-efetivos',1.5,{height:0, right:0, ease: Power4.easeIn})
 	.to('body',1,{backgroundColor:"#f2f2f2"},0)
