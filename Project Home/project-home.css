@@ -44,6 +44,16 @@ table {
 	border-spacing: 0;
 }
 
+h1 {
+	font-family: josefin-sans;
+	color: #000000;
+	font-size: 38px;
+	font-weight: 600;
+	
+}
+a {
+	text-decoration: none;
+}
 /*Init Project*/
 
 .ctnr-options {
@@ -62,8 +72,6 @@ table {
 	color: #fff;
 	font-size: 50px;
 	font-family: josefin-sans;
-	font-style: normal;
-	font-weight: 400;
 	opacity: 0.3;
 	cursor: pointer;
 	transition: .7s ease;
@@ -166,12 +174,91 @@ table {
 	cursor: pointer;
 }
 
+p   {
+	color: #9B9B9B;
+	font-family: josefin-sans;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 38px;
+	margin-top: 20px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
 
+p span{
+	color: #000;
+}
 
+.descr {
+	position: absolute;
+	top: 26vh;
+	left: 12vh;
+}
+.ctn-desc {
+	width: 35vw;
+	position: absolute;
+}
 
+.box-title {
+	height: 40px;
+	overflow: hidden;
+}
+.box-p {
+	height: 165px;
+	overflow: hidden;
+}
+.btn-serv {
+	display: block;
+	margin: 65px 0 0 50%;
+	font-family: josefin-sans;
+	font-size: 12px;
+	font-weight: 600;
+	right: 0px;
+	color: #7B7B7B;
+	letter-spacing: 2px;
+	transition: 1s ease;
+	width: 180px;
+	padding: 15px;
+}
 
+.btn-serv::after {
+	display: block;
+	content: '';
+	background-color: #BBBBBB;
+	width:30px;
+	height: 1px;
+	margin: -7px 0 0 -47px;
+	transition: 1s ease;
+}
 
+.btn-serv::before {
+	position: absolute;
+	display: block;
+	content: '';
+	background-color: #D7D7D7;
+	width: 0px;
+	height: 6px;
+	margin: 15px 0 0 70px;
+	transition: 1s ease;
+}
 
+.btn-serv:hover {
+	margin-left: 55%;
+	color: #000;
+	transition: 1s ease;
+	letter-spacing: 4px;
+}
+
+.btn-serv:hover::before {
+	transition: 1s ease;
+	width: 55px;
+}
+
+.btn-serv:hover::after {
+	transition: 1s ease;
+	width: 55px;
+}
 
 
 
