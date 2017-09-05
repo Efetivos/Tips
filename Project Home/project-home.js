@@ -78,7 +78,7 @@ $('#opt-des').mouseleave(function (){
 	.to('.ctnr-options',1.5,{autoAlpha:0, y:-100, ease: Power3.easeInOut},'-=.5')
 	.from('#photo-web', 1.5,{height: 0, ease: Power3.easeInOut},'-=1.5')
 	.from('#serv-web', 1,{y:65},'-=.8')
-	.from('#desc-web', 1,{y:165},'-=.8')
+	.from('#desc-web', 1,{y:195},'-=.8')
 	.from('#a-web', 1,{autoAlpha:0, y:50},'-=.6')
 	.from('#trg-web',1,{autoAlpha:0});
 
@@ -102,7 +102,7 @@ $('#trg-web').click(function (){
 	.to('.ctnr-options',1.5,{autoAlpha:0, y:-100, ease: Power3.easeInOut},'-=.5')
 	.from('#photo-vid', 1.5,{height: 0, ease: Power3.easeInOut},'-=1.5')
 	.from('#serv-vid', 1,{y:65},'-=.8')
-	.from('#desc-vid', 1,{y:165},'-=.8')
+	.from('#desc-vid', 1,{y:195},'-=.8')
 	.from('#a-vid', 1,{autoAlpha:0, y:50},'-=.6')
 	.from('#trg-vid',1,{autoAlpha:0});
 
@@ -126,7 +126,7 @@ $('#trg-vid').click(function (){
 	.to('.ctnr-options',1.5,{autoAlpha:0, y:-100, ease: Power3.easeInOut},'-=.5')
 	.from('#photo-mid', 1.5,{height: 0, ease: Power3.easeInOut},'-=1.5')
 	.from('#serv-mid', 1,{y:65},'-=.8')
-	.from('#desc-mid', 1,{y:165},'-=.8')
+	.from('#desc-mid', 1,{y:195},'-=.8')
 	.from('#a-mid', 1,{autoAlpha:0},'-=.6')
 	.from('#trg-mid',1,{autoAlpha:0});
 
@@ -150,7 +150,7 @@ $('#trg-mid').click(function (){
 	.to('.ctnr-options',1.5,{autoAlpha:0, y:-100, ease: Power3.easeInOut},'-=.5')
 	.from('#photo-des', 1.5,{height: 0, ease: Power3.easeInOut},'-=1.5')
 	.from('#serv-des', 1,{y:65},'-=.8')
-	.from('#desc-des', 1,{y:165},'-=.8')
+	.from('#desc-des', 1,{y:195},'-=.8')
 	.from('#a-des', 1,{autoAlpha:0, y:50},'-=.6')
 	.from('#trg-des',1,{autoAlpha:0});
 

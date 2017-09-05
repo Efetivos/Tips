@@ -85,7 +85,6 @@ a {
 }
 .number{
 	margin-left:  6vw;
-	margin-top: px;
 	color: #3E3E3E;
 }
 
@@ -289,24 +288,226 @@ p span{
 
 
 
+@media (max-width: 480px){
+	
+	
+	.title-gig {
+		display: none;
+	}
+	
+	
+	#photo-efetivos {
+		opacity: 0.7;
+	}
+	
+	
+.somos {
+	margin-top: 13vh;
+	font-size: 16px;
+}
+.ctnr-options {
+	margin-top: 20vh;
 
+	width: 100%;
 
+}
 
+.option {	
+	width: 87%;
+	margin-left:  10vw;
+	color: #fff;
+	font-size: 32px;
+	font-family: josefin-sans;
+	opacity: 0.7;
+	cursor: pointer;
+	transition: .7s ease;
+}
+.number{
+	margin-top: 5px;
+	margin-left:  6vw;
+	color: #3E3E3E;
+	font-size: 14px;
+}
+	
+.box-service {
+	position: absolute;
+	width: 280px;
+	height: 90vh;
+	right: 0;
+	overflow: hidden;
+}
 
+p   {
+	color: #9B9B9B;
+	font-family: josefin-sans;
+	font-size: 16px;
+	margin-top: 0px;
+	text-align: justify;
+}
+	
+	.title-service {
+		font-size: 25px;
+	}
+	
+	
+	/*  */
+	.ctn-desc {
+    width: 280px;
+    position: absolute;
+    margin: 5vh 0 0 -11vw;
+}
+	
+	
+.box-title {
+    overflow-y: hidden;
+    font-size: 30px;
+    width: 280px;
+}
 
+	h1 {
+		font-size: 35px;
+	}
+	
 
+	.btn-serv {
+    display: block;
+    margin: 65px 0 0 39%;
+	}
+	
+	#photo-des, #photo-mid, #photo-web, #photo-vid {
+		height: 35vh;
+	}
+	
+	.box-p {
+    height: 180px;
+    overflow: hidden;
+}
+	
+	.btn-serv {
+    display: block;
+    margin: 16% 0 0 58%;
+	width: 130px;
+		padding: 0;
+}
 
+	.btn-serv::before {
+    display: none;
+}
+	
+	
+	
+	
+} /* Fim Css Mobile*/
 
+@media (min-width: 461px) and (max-width: 960px){
+		
+	
+	.title-gig {
+		display: none;
+	}
+	
+	
+	#photo-efetivos {
+		opacity: 0.7;
+	}
+	
+	
+.somos {
+	margin-top: 13vh;
+	font-size: 16px;
+}
+.ctnr-options {
+	margin-top: 20vh;
 
+	width: 100%;
 
+}
 
+.option {	
+	width: 87%;
+	margin-left:  10vw;
+	color: #fff;
+	font-size: 32px;
+	font-family: josefin-sans;
+	opacity: 0.7;
+	cursor: pointer;
+	transition: .7s ease;
+}
+.number{
+	margin-top: 5px;
+	margin-left:  6vw;
+	color: #3E3E3E;
+	font-size: 14px;
+}
+	
+.box-service {
+	position: absolute;
+	width: 280px;
+	height: 90vh;
+	right: 0;
+	overflow: hidden;
+}
 
+p   {
+	color: #9B9B9B;
+	font-family: josefin-sans;
+	font-size: 16px;
+	margin-top: 0px;
+	text-align: justify;
+}
+	
+	.title-service {
+		font-size: 25px;
+	}
+	
+	
+	.ctn-desc {
+    width: 280px;
+    position: absolute;
+    margin: 5vh 0 0 -11vw;
+}
+	
+	
+.box-title {
+    overflow-y: hidden;
+    font-size: 30px;
+    width: 280px;
+}
 
+	h1 {
+		font-size: 35px;
+	}
+	
 
+	.btn-serv {
+    display: block;
+    margin: 65px 0 0 39%;
+	}
+	
+	#photo-des, #photo-mid, #photo-web, #photo-vid {
+		height: 35vh;
+	}
+	
+	.box-p {
+    height: 180px;
+    overflow: hidden;
+}
+	
+	.btn-serv {
+    display: block;
+    margin: 16% 0 0 58%;
+	width: 130px;
+		padding: 0;
+}
 
-
-
-
-
-
-
+	.btn-serv::before {
+    display: none;
+}
+	
+	
+		.ctn-desc {
+    width: 280px;
+    position: absolute;
+    margin: 5vh 0 0 0vw;
+}
+} /*FECHA TABLET*/
