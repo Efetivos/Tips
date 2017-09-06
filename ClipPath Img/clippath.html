@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Clip Path </title>
+		<link rel="stylesheet" type="text/css" href="clipcss.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+	</head>
+	<body>
+
+<!-- Aplicando Rect na Imagem  Precisa colocar a Imagem 
+Position: Absolute -->
+
+	<div id="test"></div>
+
+		<script>
+			var tl = new TimelineMax()
+			.from('#test',1,{width:0, ease:Power2.easeIn})
+			.to('#test', 1, {clip:"rect(0px 500 600 500)", ease: Power4.easeOut});
+		</script>
+
+		
+	</body>
+</html>

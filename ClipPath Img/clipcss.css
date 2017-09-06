@@ -1,0 +1,9 @@
+#test {
+	position: absolute;
+	background-color: blue;
+	background-image: url(http://www.todayifoundout.com/wp-content/uploads/2010/06/fly.jpg);
+	background-size: cover;
+	width: 500px;
+	height: 600px;
+	clip:rect(0px 500px 600px 0px)
+}
