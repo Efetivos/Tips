@@ -1,0 +1,124 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #1F1F1F;
+	overflow: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+.ctn-menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	background-color: #515151;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.ctn-menu a {
+	font-family: josefin-sans;	
+	text-align: center;
+	font-size: 28px;
+	text-decoration: none;
+	color: #fff;
+	width: 100%;
+	padding: 5vh 0;
+}
+
+.ctn-menu span {
+	display: none
+}
+
+.ctn-menu a:nth-child(1) {
+    margin-top: -10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BP DESKTOP*/
+
+@media (min-width: 960px){
+	
+	a::after {
+	margin-top: 15px;
+	display: block;
+	content: " ";
+	width: 120px;
+	height: 2px;
+	background-color: aliceblue;
+}
+
+.ctn-menu span {
+	display: inherit;
+	margin-top: 15px;
+}
+
+	
+	
+	
+}
