@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test | This</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+</head>
+
+<style>
+	body{
+		margin: 0;
+	}
+	.container {
+		top: 0;
+		left: auto;
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		background-color: antiquewhite;		
+	}
+	
+	.box{
+		height: 60px;
+		width: 60px;
+		cursor: pointer;
+		margin: 50px;
+		background-color: black;
+	}
+	#box1 {
+		background-color: red;
+	}
+	#box2 {
+		background-color: yellow;
+	}
+	#box3 {
+		background-color: blue;
+	}
+	#box4 {
+		background-color: green;
+	}
+	
+</style>
+
+
+
+
+<body>
+
+<div class="container">
+	<div class="box" id="box1"></div>
+	<div class="box" id="box2"></div>
+	<div class="box" id="box3"></div>
+	<div class="box" id="box4"></div>
+</div>
+
+
+
+
+<script>
+	
+	
+$('.box').html(function(){
+	
+	var tlHoverBox = new TimelineMax({paused:true})
+	.to(this, 1, {scale:1.3})
+	
+var goTween = TweenMax.to(this, 2,{x:600, paused:true})
+	
+	
+	$(this).mouseenter(function(){
+		tlHoverBox.play();		
+	});//CloseMouseEnter
+	
+	$(this).mouseleave(function(){
+		tlHoverBox.reverse();		
+	}); //CloseMouseLeave
+	
+	$(this).click(function(){
+		goTween.play();		
+	});//CloseMouseEnter
+	
+	$(this).mousedown(function(){
+		goTween.reverse();		
+	});//CloseMouseEnter
+	
+
+});//CloseJqueryHtml
+	
+</script>
+
+</body>
+</html>
