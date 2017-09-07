@@ -80,6 +80,14 @@ table {
     margin-top: -10vh;
 }
 
+.ctn-icons {
+	display: flex;
+	justify-content: space-around;
+	height: 25px;
+	width: 250px;
+	bottom: 0px;
+}
+
 
 
 
