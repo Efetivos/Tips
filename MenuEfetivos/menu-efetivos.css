@@ -25,7 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #1F1F1F;
+	background-color: #fff;
 	overflow: hidden;
 }
 ol, ul {
@@ -45,6 +45,7 @@ table {
 }
 
 
+
 .trg-menu {
 	z-index: 11;
 	position: fixed;
@@ -60,7 +61,7 @@ table {
 	top: 0px;
 	left: 0px;
 	z-index: 10;
-	background-color: #515151;
+	background-color: #1A1A1A;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -125,27 +126,88 @@ table {
 
 
 
-
+	/* 	color: #212121;
+	color: #515151;
+	color: #464646; */
 
 /*BP DESKTOP*/
 
 @media (min-width: 960px){
 	
+	.ctn-menu {
+		background-color: #fff;
+	}
+	.box-link {
+		background-color: #1A1A1A;
+		top:0;
+		flex-direction: column;
+		height: 100vh;
+		transition: 1s ease;
+		
+	}
+	
+
+	.box-link:hover   {
+		background-color: #232323;
+		transition: 1s ease;
+			
+	}
+	
+
+	.box-link:nth-child(1){
+		margin-top: 0;
+	}
+	
+	
+	.ctn-menu {
+		flex-direction: row;
+		
+	}
+	.ctn-menu a {
+		margin-top: -10vh;
+		font-size: 32px;
+		font-weight: 600;
+		color: #515151;
+		transition: 1s ease;
+	}
+	
+	.box-link:hover a {
+		color: #fff;
+		transition: 1s ease;
+	}
+		
 	a::after {
 	margin-top: 15px;
 	display: block;
 	content: " ";
-	width: 120px;
-	height: 2px;
+	width: 0%;
+	height: 1px;
 	background-color: aliceblue;
+	margin: 20 auto;
+	transition: .6s ease-out;
 }
 
+	a:hover::after {
+	width: 100%;
+	transition: .6s ease-out;
+}
+
+
+	
 .ctn-menu span {
 	display: inherit;
-	margin-top: 15px;
+	margin-top: 20px;
+	font-family: josefin-sans;
+	color: #464646;
+	transition: 1s ease;
+	
 }
 
+.box-link:hover span {
+		color: #606060;
+		transition: 1s ease;
+	}
 	
-	
+
 	
 }
