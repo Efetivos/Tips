@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Parallax Mouse Background</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    
+    body{
+         margin: 0;
+        display: flex;
+        align-items: center;
+        
+        
+    }
+    
+    .box {        
+  
+        overflow: visible;
+        height: 100vh;
+        width: 100vw;
+        
+        
+    }
+
+    #container {
+        min-height: 100%;
+        min-width: 100%;
+        background: url(ultra.png) center; 
+        background-size: cover;
+
+    }
+    
+
+</style>
+</head>
+
+
+
+<body>
+    <div class="box">
+            <div id="container"></div>
+    </div>
+</body>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('body').mousemove(function(e){ //Scene a Div que recebe Parallax
+            var x = -(e.pageX + this.offsetLeft) / 15; // Inverter o + antes do (e.pageX + this.offsetLeft)
+            var y = -(e.pageY + this.offsetTop) / 15;
+            $('#container').css('background-position-x', x + 'px');
+            $('#container').css('background-position-y', y + 'px'); // Selecionando a Div do Parallax //Margin-Left x BackgroundPosition
+        });     
+    });    
+ </script>
+
+
+</html>

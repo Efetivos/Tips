@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Other Elements | On Hove</title>
+
+</head>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    margin: 20px;
+    opacity: 0.3;
+  }
+
+  #green {
+    background-color: black;
+  }
+  #red {
+    background-color: black;
+  }
+  #blue {
+    background-color: black;
+  }
+
+</style>
+<body>
+
+<div class="box" id="green"></div>
+<div class="box" id="red"></div>
+<div class="box" id="blue"></div>
+<div class="box" id="green"></div>
+<div class="box" id="red"></div>
+<div class="box" id="blue"></div>
+
+
+<script>
+$('.box').mouseenter(function (){
+  $(this).animate({opacity:1}, 200 );
+  $('.box').not(this).animate({opacity:0}, 200 );
+  
+})
+$('.box').mouseleave(function (){
+  $(this).animate({opacity:0.4}, 200 );
+  $('.box').animate({opacity: 0.4}, 200 );
+  
+})
+
+</script>
+
+</body>
+</html>
