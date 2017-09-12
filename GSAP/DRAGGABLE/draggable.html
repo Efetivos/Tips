@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draggable | GSAP</title>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	<style type="text/css">
+		.ctn{
+			margin: 0 auto;
+			width: 80vw;
+			height: 50vh;
+			background-color: #b4b4b4;
+		}
+        
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+	</style>
+
+
+</head>
+<body>
+
+<div class="ctn">
+	<div class="box"></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+<script>
+    
+    var ctn = $('.ctn');
+    var boxs = ('.box');
+    
+    Draggable.create(boxs,{
+        
+        bounds: ctn,     //Limite do Drag
+        type: 'x,y',    //direção do Drag: x = hori, y = vert
+        edgeResistance: 1, // resistencia pra fora do Limite 'ctn' (1 mais forte = 0 mais fraco)
+        dragResistance: 0.2, // peso do elementro drag (1 mais forte = 0 mais fraco)
+        cursor: 'pointer', 
+        lockAxis: true, //Anda apenas em eixos X & Y
+        onPress: onPress, //Chama função quando pressiona o Elemento
+        onRelease: onRelease, //Chama função quando solta o Elemento
+        onDragStart: onStart, //Chama função quando começa a mover o Elemento
+        onDragEnd: onStop //Chama função quando terminar de mover o Elemento
+        
+    });
+    
+    function onPress () {
+        TweenMax.to(this.target, 1, {backgroundColor:"red"})
+    }
+    
+    
+     function onRelease () {
+        TweenMax.to(this.target, 1, {backgroundColor:"black"})
+    }
+    
+     function onStart () {
+        TweenMax.to(this.target, 1, {scale:0.5})
+    }
+    
+     function onStop () {
+        TweenMax.to(this.target, 1, {scale:1})
+    }
+</script>
+</body>
+</html>
+
+
