@@ -39,6 +39,14 @@
     var ctn = $('.ctn');
     var boxs = ('.box');
     
+    
+    var horizontalCenter = Math.floor(window.innerWidth/2); //Get center of Browser | largura
+    var verticalCener = Math.floor(window.innerHeight/2); //Get center of Browser | atura
+    
+    
+   // TweenMax.to(boxs, 2,{y:verticalCener, x:horizontalCenter, xPercent:-100, yPercent:-100}) //Tween para o Centro
+    
+    
     Draggable.create(boxs,{
         
         bounds: ctn,     //Limite do Drag

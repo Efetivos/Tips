@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draggable | GSAP</title>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	<style type="text/css">
+    body {
+            margin:0;
+        }
+	.ctn {
+            width: 60vw;
+            height: 60vh;
+            background-color: #c2c2c2;
+        display: flex;
+        
+        
+		}
+        
+        .wrap {
+            width: 20%;
+            height: 20%;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        #w1{
+            position:relative;
+            background-color: aquamarine;
+            float: left;
+        }
+         #w2{
+             position:relative;
+            background-color: grey;
+             float: left;
+        }
+         #w3{
+             position:relative;
+            background-color: green;
+             float: left;
+        }
+	</style>
+
+
+</head>
+<body>
+
+<div class="ctn">
+<div class="wrap" id="w1"><div class="box" id="b1"></div></div>
+<div class="wrap" id="w2"><div class="box" id="b2"></div></div>
+<div class="wrap" id="w3"><div class="box" id="b2"></div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+<script>
+    
+    var wrap = $('.wrap');
+    var boxs = ('.box');
+    
+    
+var horizontalCenter = Math.floor(window.innerWidth/2);
+var verticalCener = Math.floor(window.innerHeight/2);
+    
+    
+//TweenMax.to(boxs, 2,{y:verticalCener, x:horizontalCenter, xPercent:-100, yPercent:-100})
+    Draggable.create(wrap,{        
+        bounds: '.ctn',     //Limite do Drag
+        trigger: $(this),
+        type: 'x',    //direção do Drag: x = hori, y = vert
+        edgeResistance: 1, // resistencia pra fora do Limite 'ctn' (1 mais forte = 0 mais fraco)
+        //dragResistance: 0.2, // peso do elementro drag (1 mais forte = 0 mais fraco)
+        cursor: 'pointer', 
+        //lockAxis: true, //Anda apenas em eixos X & Y
+        onPress: onPress, //Chama função quando pressiona o Elemento
+        onRelease: onRelease, //Chama função quando solta o Elemento
+        onDragStart: onStart, //Chama função quando começa a mover o Elemento
+        onDragEnd: onStop //Chama função quando terminar de mover o Elemento
+        
+    });
+    
+    function onPress () {
+        TweenMax.to($(this.target).find(boxs), 1, {backgroundColor:"red"})
+    }
+    
+    
+     function onRelease () {
+        TweenMax.to(this.target,1, {x:'50%'})
+    }
+    
+     function onStart () {
+        TweenMax.to($(this.target).find(boxs), 1, {scale:0.5})
+    }
+    
+     function onStop () {
+        TweenMax.to($(this.target).find(boxs), 1, {scale:1})
+    }
+</script>
+</body>
+</html>
+
+
