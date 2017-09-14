@@ -3,9 +3,6 @@ $(document).ready(function() {
 	TweenMax.set('.pre-loading', {height:'100vh', width:'100vw'})
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
     window.onload = function() {
          window.requestAnimationFrame(function() {
