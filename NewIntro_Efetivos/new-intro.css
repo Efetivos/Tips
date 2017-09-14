@@ -82,6 +82,9 @@ a {
 	width: 120px;
 	background: #bbb;
 }
+.menu-desk {
+	display: none;
+}
 
 .text-ser-efet{
 	margin-top:30px;
@@ -112,26 +115,26 @@ a {
 	position: fixed;
 	left: 0px;
 	}
+
 .text-projetos {
 	position: fixed;
-	right: -20px;
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		bottom: 90px;
-	font-size: 14px;
-	letter-spacing: 3px;
+    bottom: 2vh;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 24px;
 
 }
 
-	.text-projetos::before {	
-	margin-left: 15px;
-	content: '';
-	height: 0.5px;
-	width: 35vw;
-	background: #000;
-	}
+.text-projetos::before {
+    margin-left: -95px;
+    display: block;
+    content: '';
+    height: 1px;
+    width: 80px;
+    background: #000;
+    margin-top: 6px;
+    position: absolute;
+}
 
 .text-slide {
 	font-family: 'Raleway', sans-serif;  
@@ -159,4 +162,104 @@ a {
 
 
 
+/* BREAKING POINT TABLET */
 
+@media (min-width: 461px) and (max-width: 959px){
+	
+	.text-projetos {
+	position: fixed;
+	right: -20px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+    bottom: 90px;
+    font-size: 13px;
+    letter-spacing: 9px;
+    margin-bottom: 24px;
+
+}
+
+.text-projetos::before {
+    margin-left: -49px;
+    display: block;
+    content: '';
+    height: 1px;
+    width: 39px;
+    background: #000;
+    margin-top: 6px;
+    position: absolute;
+}
+
+	.text-slide {
+	font-size:80px;
+}
+	
+} /* END BP TABLET*/
+
+
+/*  INIT BP DESK */
+@media (min-width: 960px){
+	
+	.menu-mob {
+		display: none;
+	}
+	
+	.text-ser-efet {
+		margin-top: 5vh;
+		font-size: 16px;
+		margin-left: -21vw;
+		letter-spacing: 4px;
+		font-weight: 500
+		
+	}
+		.text-slide {
+		font-size:120px;
+}
+	
+	.menu-desk {
+		display: inherit;
+		top: 30px;
+		right: 40px;
+		position:fixed;
+}
+	
+	.menu {
+		display: flex;
+		font-size: 13px;
+		letter-spacing: 2px;
+	}
+	
+	.menu li {
+		padding: 15px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}/*  END BP DESK */
