@@ -101,10 +101,11 @@ a {
 .wrap-photo {
 	margin-top:30px;
 	position: fixed;
-	background: aqua;
+	background: #fff;
 	width: 75%;
 	height: 65%;
 }
+
 
 .photo {
 	width: 100%;
@@ -140,13 +141,34 @@ a {
 	font-family: 'Raleway', sans-serif;  
 	font-weight: 900;
 	font-size: 55px;
+	text-transform: uppercase;
 }
 
 
+#p2 {
+	background: #FFA8A9;
+}
+
+#p3 {
+	background: #FFB685;
+}
+
+#p4{
+	background: #FFFB93;
+}
+
+#p5{
+	background: #A2FF97;
+}
+
+#p6{
+	background: #B5ADFF;
+}
 
 
-
-
+.fader-photo {
+	background: #fff;
+}
 
 
 
@@ -206,27 +228,37 @@ a {
 	}
 	
 	.text-ser-efet {
-		margin-top: 5vh;
-		font-size: 16px;
-		margin-left: -21vw;
+		margin-top: -2vh;
+		font-size: 13px;
+		margin-left: -26vw;
 		letter-spacing: 4px;
 		font-weight: 500
 		
 	}
-		.text-slide {
-		font-size:120px;
-}
 	
+	.ctn-text-slide {
+		width: 85vw;
+	}
+		.text-slide {
+		font-size: 180px;
+}
+	.wrap-photo {
+	margin-top:10px;
+	position: fixed;
+	width: 75%;
+	height: 75%;
+		background: #fff;
+}
 	.menu-desk {
 		display: inherit;
-		top: 30px;
+		top: 20px;
 		right: 40px;
 		position:fixed;
 }
 	
 	.menu {
 		display: flex;
-		font-size: 13px;
+		font-size: 12px;
 		letter-spacing: 2px;
 	}
 	
