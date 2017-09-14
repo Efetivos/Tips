@@ -41,14 +41,18 @@ var tlPhotos = new TimelineMax({repeat:-1})
 var tlMenu = new TimelineMax()
 	.staggerFrom('.menu-mob, .logo', 1, {y:-150, ease: Power1.easeOut},0.1)
 	.staggerFrom('.item-menu', 1, {y:-150, ease: Power1.easeOut},0.1)
-	.from('.text-projetos', 1,{y:200, ease: Power1.easeOut})
+	.from('.text-projetos', 1,{y:300, ease: Power1.easeOut})
 	
 var serEfet = TweenMax.from('.text-ser-efet', 1,{y:-200, ease: Power1.easeOut})
 
 
-
-
-
+var tlNext = new TimelineMax({paused:true})
+	.to('.main-body',.8,{y:60, autoAlpha:0, ease: Power2.easeIn})
+	;
+$('.text-projetos').click(function(){
+	
+	tlNext.play();
+})
 
 
 

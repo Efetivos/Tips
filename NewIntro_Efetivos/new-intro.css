@@ -223,6 +223,29 @@ a {
 /*  INIT BP DESK */
 @media (min-width: 960px){
 	
+		.text-projetos {
+	position: fixed;
+	right: -20px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+    bottom: 90px;
+    font-size: 11px;
+    letter-spacing: 9px;
+    margin-bottom: 65px;
+
+}
+	.text-projetos::before {
+    margin-left: -100px;
+    display: block;
+    content: '';
+    height: 1px;
+    width: 80px;
+    background: #000;
+    margin-top: 6px;
+    position: absolute;
+}
 	.menu-mob {
 		display: none;
 	}
