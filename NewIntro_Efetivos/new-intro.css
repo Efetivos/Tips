@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: #000;
 }
 ol, ul {
 	list-style: none;
@@ -52,6 +53,13 @@ a {
 	font-family: 'Raleway', sans-serif; 
 }
 
+.pre-loading {
+	position: fixed;
+	z-index: 100;
+	background: #000;
+	height: 100vh;
+	width: 100vw;
+}
 .main-body {
 	position: fixed;
 	left: 0;
