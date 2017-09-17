@@ -3,13 +3,42 @@
 
 body{
 	margin: 0;
-	background: #1A1A1A;	
+	background: #1A1A1A;
+	overflow: hidden;
+}
+.bg{
+	top:0px;
+	left: 0px;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: url(https://i.ytimg.com/vi/t0kGRcd-IFY/maxresdefault.jpg)center no-repeat;
+	background-size: cover;
 }
 
-.ctn {
+.bg2{
+	top:0px;
+	left: 0px;
 	position: fixed;
-	top: 0px;
-	right: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: url(https://i.ytimg.com/vi/kPiqHGiCDS0/maxresdefault.jpg) center no-repeat;
+	background-size: cover;
+}
+
+.bg3{
+	top:0px;
+	left: 0px;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: url(http://www.stoida.com/insects/fly/fly3.jpg) center no-repeat;
+	background-size: cover;
+}
+
+
+.ctn {
+
 	width: 100vw;
 	height: 100vh;
 	display: flex;
