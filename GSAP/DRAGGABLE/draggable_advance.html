@@ -8,10 +8,11 @@
 	<style type="text/css">
     body {
             margin:0;
+        overflow: hidden;
         }
 	.ctn {
-            width: 60vw;
-            height: 60vh;
+            width: 300vw;
+            height: 100vh;
             background-color: #c2c2c2;
         display: flex;
         
@@ -19,30 +20,29 @@
 		}
         
         .wrap {
-            width: 20%;
-            height: 20%;
+            width: 100vw;
+            height: 60vh;
             background-color: antiquewhite;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .box {
-            width: 100px;
-            height: 100px;
+            width: 60vw;
+            height: 45vh;
             cursor: pointer;
+            background-color: bisque;
         }
         #w1{
-            position:relative;
+
             background-color: aquamarine;
-            float: left;
         }
          #w2{
-             position:relative;
+
             background-color: grey;
-             float: left;
         }
          #w3{
-             position:relative;
             background-color: green;
-             float: left;
         }
 	</style>
 
@@ -57,49 +57,64 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ScrollToPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
 <script>
     
+    
+    var ctn = $('.ctn') ;
     var wrap = $('.wrap');
     var boxs = ('.box');
-    
-    
+      
 var horizontalCenter = Math.floor(window.innerWidth/2);
 var verticalCener = Math.floor(window.innerHeight/2);
     
+    var tlScroll = new TimelineMax({paused:true})
+        .to(window, 2, {scrollTo:"#w2"}).addPause()
+        .to(window, 2, {scrollTo:"#w3", delay:1})
+    
+// TweenMax.to(window, 2, {scrollTo:{x:horizontalCenter , offsetY:50}});
+    
     
 //TweenMax.to(boxs, 2,{y:verticalCener, x:horizontalCenter, xPercent:-100, yPercent:-100})
-    Draggable.create(wrap,{        
-        bounds: '.ctn',     //Limite do Drag
-        trigger: $(this),
+    Draggable.create(ctn,{        
+        bounds: window,     //Limite do Drag
+      //  trigger: $(this),
         type: 'x',    //direção do Drag: x = hori, y = vert
-        edgeResistance: 1, // resistencia pra fora do Limite 'ctn' (1 mais forte = 0 mais fraco)
+        edgeResistance: 0.5, // resistencia pra fora do Limite 'ctn' (1 mais forte = 0 mais fraco)
         //dragResistance: 0.2, // peso do elementro drag (1 mais forte = 0 mais fraco)
         cursor: 'pointer', 
         //lockAxis: true, //Anda apenas em eixos X & Y
-        onPress: onPress, //Chama função quando pressiona o Elemento
-        onRelease: onRelease, //Chama função quando solta o Elemento
-        onDragStart: onStart, //Chama função quando começa a mover o Elemento
-        onDragEnd: onStop //Chama função quando terminar de mover o Elemento
+        //onPress: onPress, //Chama função quando pressiona o Elemento
+        //onRelease: onRelease, //Chama função quando solta o Elemento
+        onDragStart: function () {
+            if (this.getDirection(horizontalCenter) == "right") {
+                    tlScroll.reverse();
+                }
+             if (this.getDirection(horizontalCenter) == "left") {
+                    tlScroll.play();
+                }
         
+        },//Fecha Function
     });
     
-    function onPress () {
-        TweenMax.to($(this.target).find(boxs), 1, {backgroundColor:"red"})
+   function onPress () {
+        TweenMax.to($(this.target).find(boxs), 1, {scale:0.5})
     }
     
     
      function onRelease () {
-        TweenMax.to(this.target,1, {x:'50%'})
+      TweenMax.to($(this.target).find(boxs), 1, {scale:1})
     }
     
      function onStart () {
-        TweenMax.to($(this.target).find(boxs), 1, {scale:0.5})
+         TweenMax.to($(this.target).find(boxs), 1, {backgroundColor:"red"})
+        
     }
     
      function onStop () {
-        TweenMax.to($(this.target).find(boxs), 1, {scale:1})
+        TweenMax.to($(this.target).find(boxs), 1, {backgroundColor:"black"})
     }
 </script>
 </body>

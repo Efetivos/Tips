@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	background: #1A1A1A;	
+}
+
+.ctn {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ctn-slider{
+	height: 65vh;
+	width: 75vw;
+	background: #6C6C6C;
+	overflow: hidden;
+}
+
+.photo {
+	position: absolute;
+	width: 75%;
+	height: 65%;
+}
+
+#photo1 {
+	background-color: aqua;
+	
+}
+
+#photo2 {
+	background-color: red;
+}
+#photo3 {
+	background-color: blue;
+}

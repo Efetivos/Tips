@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SPLIT TEXT | GSAP</title>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	<style type="text/css">
+        h1 {
+            color: #aaa
+        }
+	</style>
+
+
+</head>
+<body>
+
+<h1> Split Text Test</h1>
+<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi et nostrum similique dicta mollitia <br>
+ doloremque id inventore,natus ab saepe, facilis deserunt pariatur quam, tenetur quasi <br>
+ <br>
+molestiae asperiores voluptatibus maxime.</h2>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+<script src="SplitText.min.js"></script>
+<script>
+    
+    
+var mySplitText = new SplitText("h1", {type:"chars, words"}),
+    tl = new TimelineLite(),
+    numChars = mySplitText.chars.length;
+
+for(var i = 0; i < numChars; i++){
+  //random value used as position parameter
+  tl.from(mySplitText.chars[i], 2, {opacity:0}, Math.random() * 2);
+}
+    
+    
+    var tl = new TimelineLite, 
+    mySplitText = new SplitText("h2", {type:"words,chars"}), 
+    chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+TweenLite.set("h2", {perspective:400});
+
+tl.staggerFrom(chars, 0.8, {opacity:0, scale:0, y:80, rotationX:180, transformOrigin:"0% 50% -50",  ease:Back.easeOut}, 0.01, "+=0");
+    
+</script>
+</body>
+</html>
+
+

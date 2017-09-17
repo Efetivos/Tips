@@ -53,6 +53,7 @@ a {
 	font-family: 'Raleway', sans-serif; 
 }
 
+
 .pre-loading {
 	position: fixed;
 	z-index: 100;
@@ -75,20 +76,23 @@ a {
 }
 .logo {
 	top: 15px;
-	left: 15px;
+	left: 40px;
 	position:fixed;
 	height: 50px;
-	width: 120px;
+	width: 140px;
 	background: #bbb;
+	background: url(images/LOGOEFE_Flat_Black.jpg) center no-repeat;
+	background-size: contain;
 }
 
 .menu-mob {
-	top: 15px;
-	right: 15px;
+	top: 25px;
+	right: 25px;
 	position:fixed;
 	height: 30px;
-	width: 120px;
-	background: #bbb;
+	width: 60px;
+	background: url(images/menu-icon.png) center no-repeat;
+	background-size: contain;
 }
 .menu-desk {
 	display: none;
@@ -152,25 +156,37 @@ a {
 	text-transform: uppercase;
 }
 
-
+#p1{
+	background: url(images/photo-intro1.png) center no-repeat;
+	background-size: cover;
+}
 #p2 {
-	background: #FFA8A9;
+	background: url(images/photo-intro2.png)
+		center no-repeat;
+	background-size: cover;
 }
 
 #p3 {
-	background: #FFB685;
+	background: url(images/photo-intro3.png)
+		center no-repeat;
+	background-size: cover;
 }
 
 #p4{
-	background: #FFFB93;
+	background: url(images/photo-intro4.png)
+		center no-repeat;
+	background-size: cover;
 }
 
 #p5{
-	background: #A2FF97;
+	background: url(images/photo-intro5.png)
+		center no-repeat;
+	background-size: cover;
 }
 
 #p6{
-	background: #B5ADFF;
+	background: url(images/photo-intro6.jpg) center no-repeat;
+	background-size: cover;
 }
 
 
@@ -244,11 +260,11 @@ a {
 	}
 	
 	.text-ser-efet {
-		margin-top: -2vh;
-		font-size: 13px;
-		margin-left: -26vw;
-		letter-spacing: 4px;
-		font-weight: 500
+		margin-top: -4vh;
+		font-size: 16px;
+		margin-left: -15vw;
+		letter-spacing: 0px;
+		font-weight: 700
 		
 	}
 	
