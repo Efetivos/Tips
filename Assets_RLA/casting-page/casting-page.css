@@ -5,6 +5,45 @@ body{
 	margin: 0;
 	background-color: #2F2F2F;
 }
+.ctn-photo-hover{
+	position: fixed;
+	top: 0px;
+	left:0px;
+	background: #414141;
+	width: 100vw;
+	height: 100vh;
+}
+.photo-box{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+}
+.photo{
+	width: 100%;
+	height: 100%;
+}
+#photo1{
+	background:  #CF94D7;
+}
+#photo2{
+	background:  #8F9FCF;
+}
+#photo3{
+	background:  #87BC94;
+}
+#photo4{
+	background: #90B973;
+}
+#photo5{
+	background:  #B5BF7D;
+}
+#photo6{
+	background: #FFCC84;
+}
+#photo7{
+	background: #FF9799;
+}
 .ctn-names{
 	position: fixed;
 	top: 0px;
@@ -22,6 +61,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	
+	
 }
 
 a {
@@ -38,8 +78,18 @@ a::after{
 	position: absolute;
 	content: '';
 	display: block;
-	width: 180px;
+	width: 0px;
 	height: 1px;
 	background: #FF0004;
 	margin-top: -12px;
+	transition: .5s ease-out;
+}
+
+a:hover:after{
+	width: 200px;
+	transition: .5s ease-out;
+}
+
+#photo1{
+	background: #FF9799;
 }
