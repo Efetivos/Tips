@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draggable | GSAP</title>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	<style type="text/css">
+    body {
+            margin:0;
+        }
+        .ctn-divisor{
+  height: 100vh;
+  width:100vw;
+}
+.parallax-container {
+  height: 60vh;
+  width: 100vw;
+}
+.parallax-window {
+    min-height: 100vh;
+  width:40vw;
+}
+	
+	</style>
+
+
+</head>
+<body>
+
+
+<img class="parallax-window">
+<div class="ctn-divisor"></div>
+
+
+<img class="parallax-window">
+<div class="ctn-divisor"></div>
+      
+<div class="parallax-container"></div>
+
+
+
+<script src="parallax.min.js"></script>
+
+<script>
+    
+    $('.parallax-window').parallax({
+        imageSrc:"photo-nicole4.png",
+        speed: 0.9
+    });
+
+       $('.parallax-container').parallax({imageSrc:"barbara-photo2.jpg"});
+</script>
+</body>
+</html>
+
+

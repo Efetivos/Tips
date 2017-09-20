@@ -1,0 +1,59 @@
+<style type="text/css">
+	* {
+  transition: all ease-in-out 250ms;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+.ctn-divisor{
+  height: 100vh;
+  width:100vw;
+  background: red;
+  opacity: 0.6;
+}
+.photo{
+   height: 100vh;
+  width: 99vw;
+    background: url(https://peopledotcom.files.wordpress.com/2016/10/nicki-minaj-1.jpg?w=1500&h=1800) center;
+   background-size: 100%;
+}
+.photo-prlx {
+
+
+}
+.photo-prlx{
+  transition: initial;
+}
+</style>
+<div class="photo-prlx photo"></div>
+<div class="ctn-divisor"></div>
+
+<div class="photo-prlx photo"></div>
+<div class="ctn-divisor"></div>
+
+<div class="photo-prlx photo"></div>
+<div class="ctn-divisor"></div>
+
+<div class="photo-prlx photo"></div>
+<div class="ctn-divisor"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(window).scroll(function(e) {
+  parallax();
+})
+
+
+function parallax() {
+  var scroll = $(window).scrollTop();
+
+
+     $('.photo-prlx').css('background-position', 'center ' + (( -scroll ) * 0.5) + 'px');
+
+
+}
+
+</script>

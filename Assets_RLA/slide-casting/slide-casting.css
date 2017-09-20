@@ -7,16 +7,23 @@ body{
 	overflow: hidden;
 }
 .bg{
+	opacity: 0.4;
 	top:0px;
 	left: 0px;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: url(https://i.ytimg.com/vi/t0kGRcd-IFY/maxresdefault.jpg)center no-repeat;
+	background: url(http://efetivos.com.br/images/header_sketch.jpg)center no-repeat;
 	background-size: cover;
+	 -webkit-filter: blur(8px);
+  	-moz-filter: blur(8px);
+  	-o-filter: blur(8px);
+  	-ms-filter: blur(8px);
+  filter: blur(8px);
 }
 
 .bg2{
+	opacity: 0.4;
 	top:0px;
 	left: 0px;
 	position: fixed;
@@ -24,9 +31,15 @@ body{
 	height: 100vh;
 	background: url(https://i.ytimg.com/vi/kPiqHGiCDS0/maxresdefault.jpg) center no-repeat;
 	background-size: cover;
+	-webkit-filter: blur(8px);
+  	-moz-filter: blur(8px);
+  	-o-filter: blur(8px);
+  	-ms-filter: blur(8px);
+  	filter: blur(8px);
 }
 
 .bg3{
+	opacity: 0.4;
 	top:0px;
 	left: 0px;
 	position: fixed;
@@ -34,6 +47,11 @@ body{
 	height: 100vh;
 	background: url(http://www.stoida.com/insects/fly/fly3.jpg) center no-repeat;
 	background-size: cover;
+	-webkit-filter: blur(8px);
+  	-moz-filter: blur(8px);
+  	-o-filter: blur(8px);
+  	-ms-filter: blur(8px);
+  	filter: blur(8px);
 }
 
 
@@ -59,13 +77,16 @@ body{
 }
 
 #photo1 {
-	background-color: aqua;
+	background: url(http://efetivos.com.br/images/header_sketch.jpg)center no-repeat;
+	background-size: cover;
 	
 }
 
 #photo2 {
-	background-color: red;
+	background: url(https://i.ytimg.com/vi/kPiqHGiCDS0/maxresdefault.jpg) center no-repeat;
+	background-size: cover;
 }
 #photo3 {
-	background-color: blue;
+	background: url(http://www.stoida.com/insects/fly/fly3.jpg) center no-repeat;
+	background-size: cover;
 }
