@@ -64,19 +64,22 @@ h1{
 	text-transform: uppercase;
 }
 
+#seja-desk{
+	display: none;
+}
 .text-seja{
-	margin-top: 12vh;
-	font-size: 14px;
-	font-weight: 200;
-	letter-spacing: 2px;
+	margin-top: 8vh;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 4px;
+	opacity: 0.35;
+	font-family: 'Montserrat', sans-serif;
 }
 .text-efetivos {
 	margin-top: 10px;
 	font-size: 36px;
 	font-weight: 700;
-	letter-spacing: 12px;
-	
-	
+	letter-spacing: 12px;	
 }
 
 a {
@@ -85,6 +88,7 @@ a {
 	font-family: "Montserrat", sans-seif;
 	font-size: 12px;
 	opacity: 0.3;
+	bottom: 5vh;
 }
 
 .ctn-links{
@@ -126,9 +130,6 @@ video {
   	transition: 1s opacity;
 }
 
-.ctn-logo {
-	
-}
 
 
 
@@ -155,19 +156,62 @@ video {
   border-radius: 50%;
 }
 
+/* FIM MOBILE */
 
+@media (min-width: 480px) and (max-width: 960px){
+	
+	#seja-desk{
+	display: none;
+}
+	.text-efetivos {
+    	font-size: 58px;
+}
+	.text-seja {
+    font-size: 16px;
 
+}
 
+	
+}/* FIM TABLET */
 
+/* FIM TABLET */
 
+@media (min-width: 961px){
+	
+	.ctn-logo{
+		width: 72px;
+	margin-top: 18vh;
+}
+	#seja-mob{
+	display: none;
+}
+	
+	#seja-desk {
+	display: inherit;
+}
+	
+	.text-efetivos {
+	margin-top: 16px;
+    font-size: 86px;
+    letter-spacing: 34px;
+}
+	.text-seja {
+    font-size: 12px;
+}
 
+	#target{
+ 	 width: 78px;
+ 	 height: 78px;
+	 margin-top:6vh;
+	
+}
 
+	a {
+	padding: 18px;
+	font-size: 12px;
+	bottom: 8vh;
+		letter-spacing: 4px;
+}
 
-
-
-
-
-
-
-
-
+	
+}/* FIM DESK */
