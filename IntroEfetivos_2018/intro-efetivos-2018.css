@@ -56,8 +56,16 @@ font-family: 'Montserrat', sans-serif;
 
 body{
 	background-color: #000;
+	overflow: hidden;
 }
 
+.preload{
+	position: fixed;
+	min-height: 100%;
+	min-width: 100%;
+	background-color: #000;
+	z-index: 99;
+}
 h1{
 	color: #fff;
 	font-family: josefin-sans, sans-serif;
@@ -87,7 +95,7 @@ a {
 	padding: 15px;
 	font-family: "Montserrat", sans-seif;
 	font-size: 12px;
-	opacity: 0.3;
+	opacity: 0.6;
 	bottom: 5vh;
 }
 
@@ -95,7 +103,7 @@ a {
 	display: flex;
 	align-items: center;
 	position: absolute;
-	bottom: 5vh;	
+	bottom: 8vh;	
 }
 
 a {
@@ -128,6 +136,7 @@ video {
  	background: url(images/poster_video.png) no-repeat;
   	background-size: cover;
   	transition: 1s opacity;
+  	opacity: 0.35;
 }
 
 
@@ -140,7 +149,7 @@ video {
   height: 66px;
   background: transparent; 
   border-radius: 50%;
-  border: 1px solid  rgba(255,255,255,0.21);
+  border: 1px solid  rgba(255,255,255,0.7);
   display: flex;
   align-items: center;
   justify-content: center;
