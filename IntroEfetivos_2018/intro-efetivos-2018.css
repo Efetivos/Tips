@@ -177,7 +177,16 @@ video {
 /* FIM TABLET */
 
 @media (min-width: 961px){
-	
+#cursor-decor{
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  background: #f2f2f2; 
+  border-radius: 50%;
+  border: 1px solid #a1a1a1;
+  opacity: 0.35;
+}
+
 	.ctn-logo{
 		width: 72px;
 	margin-top: 18vh;
