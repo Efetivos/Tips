@@ -176,6 +176,7 @@ table {
 	height: 1px;
 	background-color: aliceblue;
 	margin: 20 auto;
+		transition: 1s;
 }
 
 		a:hover::after {
