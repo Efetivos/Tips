@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>Detect Scroll | Up or Down</title>
+</head>
+
+<style>
+	body{
+		margin: 0;
+		background-color: #969696;
+		height: 4500px;
+	}
+	.bg-menu{
+		top: 0px;
+		position: fixed;
+		width: 100vw;
+		height: 60px;
+		background-color: ;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	.item-menu{
+		height: 55%;
+		width: 120px;
+		background-color: aqua;
+		margin: 0px 10px;
+	}
+</style>
+
+
+<body>
+
+<div class="bg-menu">
+	<div class="item-menu">LINK4</div>
+	<div class="item-menu">LINK3</div>
+	<div class="item-menu">LINK2</div>
+	<div class="item-menu">LINK1</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+<script>
+	
+	var tlMenuUpDow = new TimelineMax({paused:true})
+			.from('.bg-menu',.5,{height:0, ease:Power2.easeOut})
+			.staggerFrom('.item-menu',.5,{y:-50, ease:Power2.easeOut},0.06,'-=.3')
+	;
+	
+var iScrollPos = 0;
+ 
+$(window).scroll(function () {
+    var iCurScrollPos = $(this).scrollTop();
+    	if (iCurScrollPos > iScrollPos) {
+        	tlMenuUpDow.reverse();
+		} else {
+			tlMenuUpDow.play();
+		}
+    iScrollPos = iCurScrollPos;
+});
+
+	/* BONUS SCROLL WHELL DETECT */
+	
+/*	
+	$(window).bind('mousewheel', function(e){
+    if(e.originalEvent.wheelDelta > 0)
+    {
+        tlMenuUpDow.play();
+    }
+    else
+    {
+       tlMenuUpDow.reverse();
+    }
+});*/
+	
+	
+	
+</script>
+</body>
+</html>
