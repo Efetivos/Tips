@@ -20,6 +20,29 @@ $(".trg-menu").click(function() {
 
 
 else {
+
+	
+	
+	
+	$('.box-link').html(function(){
+			
+	
+		var tlHoverBoxLink = new TimelineMax({paused:true})
+			.to(this, 1,{backgroundColor:'#292929'})
+			.to($(this).find('a'), 1,{color:'#fff'},'-=1')
+	
+	$(this).hover(	
+		function(){			
+			tlHoverBoxLink.play();
+		}, 
+		
+		function(){
+			tlHoverBoxLink.reverse();
+		})//Close Hover
+	
+	})//CloseBoxLinkHtml
+	
+
 	
 	var tlMenuEfetMob = new TimelineMax()
 		

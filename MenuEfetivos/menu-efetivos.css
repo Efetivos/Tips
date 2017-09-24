@@ -59,16 +59,15 @@ table {
 .ctn-menu {
 	position: fixed;
 	top: 0px;
-	left: 0px;
+	left: -0.8px;
 	z-index: 10;
-	background-color: #1A1A1A;
-	width: 100vw;
+	background-color: #000;
+	width: 100.1vw;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
 }
 .box-link {
 	width: 100%;
@@ -108,7 +107,13 @@ table {
 	position: absolute;
 }
 
-
+.menu-icons {
+	opacity: 0.25;
+	cursor: pointer;
+}
+.menu-icons:hover {
+	opacity: 1;
+}
 
 
 
@@ -142,17 +147,10 @@ table {
 		top:0;
 		flex-direction: column;
 		height: 100vh;
-		transition: 1s ease;
 		
 	}
 	
 
-	.box-link:hover   {
-		background-color: #232323;
-		transition: 1s ease;
-			
-	}
-	
 
 	.box-link:nth-child(1){
 		margin-top: 0;
@@ -168,28 +166,21 @@ table {
 		font-size: 32px;
 		font-weight: 600;
 		color: #515151;
-		transition: 1s ease;
 	}
-	
-	.box-link:hover a {
-		color: #fff;
-		transition: 1s ease;
-	}
-		
+
 	a::after {
 	margin-top: 15px;
 	display: block;
-	content: " ";
+	content: '';
 	width: 0%;
 	height: 1px;
 	background-color: aliceblue;
 	margin: 20 auto;
-	transition: .6s ease-out;
 }
 
-	a:hover::after {
-	width: 100%;
-	transition: .6s ease-out;
+		a:hover::after {
+			width: 100%;
+			transition: 1s;
 }
 
 
@@ -199,15 +190,10 @@ table {
 	margin-top: 20px;
 	font-family: josefin-sans;
 	color: #464646;
-	transition: 1s ease;
 	
 }
 
-.box-link:hover span {
-		color: #606060;
-		transition: 1s ease;
-	}
-	
+
 
 	
 }
