@@ -3,7 +3,7 @@ if ($( window ).width() < 960) {
 
 	var tlMenuEfetMob = new TimelineMax()
 		
-		.from('.ctn-menu',1.5,{width:0, ease: Power3.easeInOut})
+		.from('.ctn-menu',1.5,{width:0, scale:1.1, x:-49, skewX: -9 , ease: Power2.easeInOut})
 		.staggerFrom('.link',1,{autoAlpha:0, x:-300, ease: Power2.easeOut},0.1,'-=1.3')
 		.staggerFrom('.menu-icons',1,{autoAlpha:0, y:100, ease: Power2.easeOut},0.1,'-=0.9')
 	
