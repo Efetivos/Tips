@@ -10,7 +10,7 @@ if ($( window ).width() < 960) {
     .reverse();
 ;   
 
-$(".trg-menu").click(function() {
+$(".box-trigger").click(function() {
 
   tlMenuEfetMob.reversed(!tlMenuEfetMob.reversed());
 });	
@@ -53,11 +53,25 @@ else {
     .reverse();
 ;   
 
-$(".trg-menu").click(function() {
+$(".box-trigger").click(function() {
 
   tlMenuEfetMob.reversed(!tlMenuEfetMob.reversed());
 });	
 	
 } //Fecha ELSE
 
+var tlTriggerMenu = new TimelineMax({paused:true})
+		  .from('.up,.down',.5,{opacity:0.5})
+		  .to('.up,.down',.5,{scale:0.5})
+		  .to('.up',.5,{y:4.6, ease: Power3.easeIn},0)
+		  .to('.down',.5,{y:-4.6, ease: Power3.easeIn},0)
+		  .to('.up',.5,{rotation: 45, ease: Power3.easeIn})
+		  .to('.down',.5,{rotation: -45, ease: Power3.easeIn},'-=.5')
+		  .reverse();
+		
+		$(".box-trigger").click(function() {
+		
+		  tlTriggerMenu .reversed(!tlTriggerMenu .reversed());
+		});	
+		
 
