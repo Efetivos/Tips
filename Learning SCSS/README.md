@@ -1,11 +1,11 @@
 # Instalação DW
 
-> 1º Criar pasta raiz, e pastas css & scss
-> 2º Barra de Ferramenta  DW > Site > Novo Site
-> 3º Pre processadores CSS > Geral > Ticar " x " Criar Cometários de origem
-> 4º Origem e sáida > Escolher opção > Definir pasta de sáida e escolher pasta /css
-> 5º Salvar
-> 6º Editar arquivo .Scss e ver se gerou automaticamente o arquivo .Css
+ 1º Criar pasta raiz, e pastas css & scss
+ 2º Barra de Ferramenta  DW > Site > Novo Site
+ 3º Pre processadores CSS > Geral > Ticar " x " Criar Cometários de origem
+ 4º Origem e sáida > Escolher opção > Definir pasta de sáida e escolher pasta /css
+ 5º Salvar
+ 6º Editar arquivo .Scss e ver se gerou automaticamente o arquivo .Css
 
 
 ### Learning
