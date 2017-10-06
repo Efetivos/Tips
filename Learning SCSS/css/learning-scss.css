@@ -1,0 +1,45 @@
+/* Scss Document */
+/* line 24, ../scss/learning-scss.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #123;
+  margin: 0;
+}
+
+/* line 29, ../scss/learning-scss.scss */
+h1 {
+  color: orange;
+}
+
+/* line 33, ../scss/learning-scss.scss */
+.test {
+  color: orange;
+}
+
+/* line 38, ../scss/learning-scss.scss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 500px;
+  background-color: #212121;
+}
+/* line 44, ../scss/learning-scss.scss */
+.container .menu a {
+  color: orange;
+}
+/* line 46, ../scss/learning-scss.scss */
+.container .menu a:hover {
+  color: greenyellow;
+}
+@media (max-width: 320px) {
+  /* line 38, ../scss/learning-scss.scss */
+  .container {
+    background-color: orange;
+  }
+}

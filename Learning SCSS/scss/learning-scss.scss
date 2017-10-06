@@ -1,0 +1,55 @@
+/* Scss Document */
+@mixin flex-centered {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin mobile {
+	@media (max-width: 320px) {
+		@content;
+		
+	}
+}
+$color-primary: orange ;
+
+
+
+
+
+
+
+
+body{
+	@include flex-centered;
+	background-color: #123;
+	margin: 0;
+}
+h1 {
+	color: $color-primary;
+}
+
+.test {
+	
+	color: $color-primary;
+}
+
+.container{
+	@include flex-centered;
+	width: 1200px;
+	height: 500px;
+	background-color: #212121;
+	.menu{
+		a{
+			color: $color-primary;
+				&:hover{
+					color: greenyellow;
+				}
+		}
+		
+	}
+@include mobile{
+			background-color: $color-primary;
+		}
+}
