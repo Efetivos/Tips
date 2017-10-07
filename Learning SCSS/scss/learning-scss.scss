@@ -1,4 +1,5 @@
 /* Scss Document */
+// *********************** MIXIN COMUM
 @mixin flex-centered {
 	display: flex;
 	flex-direction: column;
@@ -6,50 +7,117 @@
 	justify-content: center;
 }
 
+@mixin hundred-both {
+	width: 100%;
+	height: 100%;
+} 
+
+
+// *********************** MIXIN MEDIA QUERY
 @mixin mobile {
-	@media (max-width: 320px) {
-		@content;
-		
+	@media (max-width: 380px) {
+		@content;		
 	}
 }
-$color-primary: orange ;
+
+@mixin tab {
+	@media only screen and (min-width: 381px) and (max-width: 660px) {
+		@content;		
+	}
+}
+
+@mixin desk {
+	@media only screen and (min-width: 661px) and (max-width: 960px) {
+		@content;		
+	}
+}
+
+
+
+// *********************** VARIAVEIS
+$hundred-both: orange ;
+
+
+
+
+
+// *********************** CORES
+$color-mob: #3C472E;
+$color-tab: #343146;
+$color-desk: #3B2D3A;
 
 
 
 
 
 
+// ***********************  BACKGROUND IMAGE
+$sociais: facebook instagram twitter;
+@each $item in $sociais {
+	.icon-#{$item} {
+		background: url('../images/#{$item}.png');
+	}
+}
+
+
+
+/* FIM RECURSOS SCSS*/
 
 
 body{
 	@include flex-centered;
-	background-color: #123;
+	background-color: $color-mob;
 	margin: 0;
-}
-h1 {
-	color: $color-primary;
+	height: 100vh;
+	width: 100vw;
+	@include tab{
+		background-color: $color-tab;
+	}
+	@include desk{
+		background-color: $color-desk;
+	}
 }
 
-.test {
-	
-	color: $color-primary;
-}
 
-.container{
+
+.container {
 	@include flex-centered;
-	width: 1200px;
-	height: 500px;
-	background-color: #212121;
-	.menu{
-		a{
-			color: $color-primary;
-				&:hover{
-					color: greenyellow;
-				}
-		}
+	margin-bottom: 10vh;
+	height: 15vh;
+	width: 80vw;
+	background-color: darken($color-mob, 5%);
+	p {
+		color: #fff;
+	}
+	@include tab{
+		background-color: darken($color-tab, 5%);
 		
 	}
-@include mobile{
-			background-color: $color-primary;
-		}
+	
+	@include desk{
+		background-color: darken($color-desk, 8%);
+		opacity: 0.2;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,45 +1,59 @@
 /* Scss Document */
-/* line 24, ../scss/learning-scss.scss */
+.icon-facebook {
+  background: url("../images/facebook.png");
+}
+
+.icon-instagram {
+  background: url("../images/instagram.png");
+}
+
+.icon-twitter {
+  background: url("../images/twitter.png");
+}
+
+/* FIM RECURSOS SCSS*/
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #123;
+  background-color: #3C472E;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+@media only screen and (min-width: 381px) and (max-width: 660px) {
+  body {
+    background-color: #343146;
+  }
+}
+@media only screen and (min-width: 661px) and (max-width: 960px) {
+  body {
+    background-color: #3B2D3A;
+  }
 }
 
-/* line 29, ../scss/learning-scss.scss */
-h1 {
-  color: orange;
-}
-
-/* line 33, ../scss/learning-scss.scss */
-.test {
-  color: orange;
-}
-
-/* line 38, ../scss/learning-scss.scss */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1200px;
-  height: 500px;
-  background-color: #212121;
+  margin-bottom: 10vh;
+  height: 15vh;
+  width: 80vw;
+  background-color: #2f3824;
 }
-/* line 44, ../scss/learning-scss.scss */
-.container .menu a {
-  color: orange;
+.container p {
+  color: #fff;
 }
-/* line 46, ../scss/learning-scss.scss */
-.container .menu a:hover {
-  color: greenyellow;
-}
-@media (max-width: 320px) {
-  /* line 38, ../scss/learning-scss.scss */
+@media only screen and (min-width: 381px) and (max-width: 660px) {
   .container {
-    background-color: orange;
+    background-color: #292737;
+  }
+}
+@media only screen and (min-width: 661px) and (max-width: 960px) {
+  .container {
+    background-color: #241b23;
+    opacity: 0.2;
   }
 }

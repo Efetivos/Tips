@@ -45,8 +45,35 @@
 	}
 }
 
+atribuindo:
 
 @include mobile{
 			background-color: $color-primary;
 		}
+```
+
+> Função para Gerar background image
+```bash
+$sociais: facebook instagram twitter;
+
+@each $item in $sociais {
+	.icon-#{$item} {
+		background: url('../images/#{$item}.png');
+	}
+}
+
+result:
+.icon-facebook {
+  background: url("../images/facebook.png");
+}
+
+.icon-instagram {
+  background: url("../images/instagram.png");
+}
+
+.icon-twitter {
+  background: url("../images/twitter.png");
+}
+
+
 ```
