@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pixi</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.3/pixi.js"></script>
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+	<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function() {
+				document.querySelector('body').addEventListener('click', function(){
+					var tl = new TimelineMax﻿();
+					tl
+						.to(displacementFilter.scale, 1, {y:600,x: 0.1})
+						.to(displacementFilter.scale, 1, {y:0.1,x:0.1});
+					tl
+						.to(img2, 1, {alpha: 1},1)
+					tl
+						.fromTo(img2.scale, 1, 
+							{y:img2.scale.y*2},
+							{y:img2.scale.y},1)
+				});
+			  	
+			  		// PIXI INIT STAGE
+			  		var renderer = new PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x000000});
+			  		document.getElementById("pixi").appendChild(renderer.view);
+			  		var stage = new PIXI.Stage();
+			  		var container = new PIXI.DisplayObjectContainer();
+			  		stage.addChild(container);
+			  		// render image
+			  		var img1 = PIXI.Sprite.fromImage('1.jpg');
+			  		img1.width = 650;
+			  		img1.height = 500;
+			  		img1.position.x = 75;
+			  		img1.position.y = 50;
+			  		container.addChild(img1);
+			  		// render second image
+			  		var img2 = PIXI.Sprite.fromImage('2.jpg');
+			  		img2.width = 650;
+			  		img2.height = 500;
+			  		img2.position.x = 75;
+			  		img2.position.y = 50;
+			  		img2.alpha = 0;
+			  		container.addChild(img2);
+			  		// add Filters
+			  		var disSprite = PIXI.Sprite.fromImage('map.jpg');
+			  		disSprite.width = renderer.width*1.5;
+			  		disSprite.height = renderer.height * 1.5;
+			  		var displacementFilter = new PIXI.filters.DisplacementFilter(disSprite);
+			  		displacementFilter.scale.set(0.1);
+			  		stage.addChild(disSprite);
+			  		container.filters = [displacementFilter];
+			  		// var i =0;
+			  		function draw(){
+			  			// i++;
+			  			// disSprite.x +=1;
+			  			// disSprite.y +=1;
+			  			renderer.render(stage);
+			  			window.requestAnimationFrame(draw);
+			  		}
+			  		draw();
+			});
+	</script>
+</head>
+<body > 
+<h1>Click anywhere to run</h1>
+<div id="pixi"></div>
+
+ <svg width="800" height="600" viewBox="0 0 800 600"
+     xmlns="http://www.w3.org/2000/svg">
+ 
+
+  <defs>
+  	<filter id="displacementFilter">
+  	  <feTurbulence type="turbulence" baseFrequency="0.05"
+  	      numOctaves="2" result="turbulence"/>
+  	  <feDisplacementMap in2="turbulence" in="SourceGraphic"
+  	      scale="50" xChannelSelector="R" yChannelSelector="G"/>
+  	</filter>
+  	<!-- TRY THIS ONE! -->
+  	<filter id="displacement" filterUnits="objectBoundingBox">
+  	        <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2"  result="turb"/>
+  	          <feColorMatrix in="turb" result="huedturb" type="hueRotate" values="90">     
+  	         <animate attributeType="XML" attributeName="values" values="0;180;360" dur="6s" repeatCount="indefinite"/>
+  	        </feColorMatrix>
+  	        <feDisplacementMap in="SourceGraphic" in2="huedturb" scale="20" result="displace" xChannelSelector="B"/>
+  	        <feOffset dx="-5" dy="-5" in="displace" result="unoffsetdisplace"/>
+  	</filter>
+  </defs>
+
+  <image href="1.jpg"
+      style="filter: url(#displacementFilter)"/>
+</svg> 
+</body>
+</html>

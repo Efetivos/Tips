@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Super-duper animations</title>
+</head>
+<body>
+<h1>Click anywhere to start</h1>
+
+
+
+<canvas id="supercanvas" width="800" height="600" style="background-image: url(1.jpg)"></canvas>
+
+<script>
+	var canvas = document.getElementById('supercanvas');
+	var ctx = canvas.getContext('2d');
+
+	var img = new Image();
+	var mask = new Image();
+
+	img.src = '2.jpg';
+	mask.src = 'nature-sprite.png';
+	img.onload = function(){
+		ctx.drawImage(img,0,0,800,600);
+	}
+	
+	var i = 0;
+	function draw(){
+		i++;
+		ctx.clearRect(0,0,800,600);
+
+		ctx.drawImage(mask,-800*i,0,800*23,600);
+		ctx.globalCompositeOperation = 'source-in';
+		ctx.drawImage(img,0,0,800,600);
+		ctx.globalCompositeOperation = 'source-over';
+		// window.requestAnimationFrame(draw);
+		setTimeout(draw,100);
+	}
+
+
+
+	document.querySelector('body').addEventListener('click',function(){
+		draw();
+		document.querySelector('body').className = 'start-animation';
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="CSScanvas">
+	<div class="img" style="background: url(1.jpg)"></div>
+	<div class="img img_2" style="background: url(2.jpg)"></div>
+</div>
+
+<style>
+	.CSScanvas{
+		position: relative;
+		width: 800px;
+		height: 600px;
+	}
+	.img{
+		width: 800px;
+		height: 600px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.start-animation .img_2{
+		-webkit-mask: url(nature-sprite.png);
+		mask: url(nature-sprite.png);
+		-webkit-mask-size: 2300% 100%;
+		mask-size: 2300% 100%;
+		-webkit-animation: mask-play 1.4s steps(22) forwards;
+		animation: mask-play 1.4s steps(22) forwards;
+	}
+
+	@keyframes mask-play {
+	  from {
+		-webkit-mask-position: 0% 0;
+		mask-position: 0% 0;
+	  }
+	  to {
+		-webkit-mask-position: 100% 0;
+		mask-position: 100% 0;
+	  }
+	}
+</style>
+	
+</body>
+</html>
