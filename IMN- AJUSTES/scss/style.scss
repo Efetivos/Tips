@@ -1,0 +1,430 @@
+@import'normal-reset'; @import 'alias-mixins';
+/********** ABRE VARS **********/
+/********** FECHA VARS **********/
+.body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  
+  .boxTrigger, .logoHome, .navegador, .navegador2, .btnSaiba {
+    cursor: pointer; }
+  
+  .zindex {
+    z-index: 1; }
+  
+  h1 {
+    font-family: "Cardo", serif;
+    font-size: 2.5rem;
+    color: #fff; }
+  
+  h4 {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9rem;
+    color: #fff; }
+  
+  h5 {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.7rem;
+    color: #fff; }
+  
+  p {
+    font-family: "Asap", sans-serif;
+    font-size: .9375rem;
+    color: #fff;
+    letter-spacing: -0.01rem;
+    line-height: 1.9;
+    font-weight: 500; }
+  
+  .dpNone {
+    display: none; }
+  
+  .flexEnd {
+    align-self: flex-end; }
+  
+  /********** ABRE MOBILE **********/
+  .ctnHeader {
+    width: 85%;
+    height: 55px;
+    position: fixed;
+    top: 18px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto; }
+  
+  .logoHome {
+    height: 45px; }
+  
+  .logoHome img {
+    height: 100%; }
+  
+  .menuMob {
+    width: 45px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9c9c9c;
+    border-radius: 2px; }
+  
+  .boxRisco {
+    width: 17px;
+    height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  
+  .risco {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    vertical-align: middle; }
+  
+  .menuDesk {
+    display: none; }
+  
+  .menuDesk ul {
+    display: flex; }
+  
+  .menuDesk ul li a {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    font-size: .8375rem;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 40px;
+    letter-spacing: .03rem; }
+  
+  .main {
+    width: 100%;
+    position: relative; }
+  
+  .foto1 {
+    background: url(../image/4.jpg) center no-repeat; }
+  
+  .foto2 {
+    background: url(../image/3.jpg) center no-repeat; }
+  
+  .foto3 {
+    background: url(../image/2.jpg) center no-repeat; }
+  
+  .foto4 {
+    background: url(../image/1.jpg) center no-repeat; }
+  
+  .foto5 {
+    background: url(../image/5.jpg) center no-repeat; }
+  
+  .back {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover; }
+  
+  .ctnGeral {
+    width: 95%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1340px; }
+  
+  .ctnCentral {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  
+  .boxTitulo {
+    align-self: flex-start; }
+  
+  .ctnCentral h1 {
+    position: relative;
+    z-index: 1; }
+  
+  .boxTitulo.pdLeft {
+    padding-left: 10%; }
+  
+  .boxTriagulo {
+    height: 250px;
+    position: absolute;
+    left: -115px;
+    top: -40px;
+    z-index: 0; }
+  
+  .boxTriagulo img {
+    height: 100%; }
+  
+  .ctnCentral h1 {
+    width: 230px;
+    line-height: 42px; }
+  
+  .navegador {
+    width: 250px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 4vh;
+    left: 6%;
+    z-index: 1; }
+  
+  .boxCirculo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0px 0px 7px #fff; }
+  
+  .boxDescri {
+    width: calc(100% - 40px);
+    line-height: 24px;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column; }
+  
+  .bordaHome {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin: 15px 0 15px 0;
+    opacity: .5; }
+  
+  .btnSaiba {
+    align-self: flex-start;
+    padding: 10px 10px 10px 18px;
+    cursor: poniter; }
+  
+  h1.wSobre {
+    width: calc(100% - 40px);
+    padding: 0 20px 0 20px; }
+  
+  /********** ABRE 768 **********/
+  @media only screen and (min-width: 767px) {
+    .ctnGeral {
+      width: 92%; }
+    .ctnCentral h1 {
+      width: 600px;
+      font-size: 3.0rem;
+      line-height: 3.0rem; }
+    .trianguloDesk {
+      display: block;
+      right: 20px;
+      left: auto;
+      height: 150px;
+      top: -34px; }
+    .boxNumeral {
+      position: absolute;
+      right: 15px;
+      top: -10px;
+      display: block;
+      z-index: 1; }
+    .boxNumero {
+      font-size: 4rem;
+      font-family: "Oswald", sans-serif;
+      color: #fff;
+      text-align: right;
+      font-weight: 700;
+      padding: 5px; }
+    .boxNumeroTexto {
+      font-size: 1.3rem;
+      font-family: "Oswald", sans-serif;
+      color: #fff;
+      text-align: right;
+      font-weight: 700;
+      padding: 5px; }
+    .boxTriagulo.trianguloHome {
+      left: 3%;
+      top: -100px; }
+    .boxTriagulo.trianguloHome {
+      left: 3%;
+      top: -100px; }
+    h1.tituloHome {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      padding-left: 18%; }
+    .boxDescri p {
+      width: 70%; }
+    .trigger {
+      width: 92%;
+      margin: 0 auto;
+      position: fixed;
+      bottom: 3vh;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 1; }
+    .ctnTrigger {
+      width: 80px; }
+    .boxTrigger {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      padding: 2px; }
+    .boxLinha, .boxtriggerCirculo {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .boxLinha {
+      width: 50%;
+      justify-content: flex-start; }
+    .boxtriggerCirculo {
+      width: 70%; }
+    .linhaTrigger {
+      width: 0%;
+      height: 4px;
+      background: #3e86c6; }
+    .triggerCirculo {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      border: 1px solid #fff; }
+    .bordaT {
+      width: 100%;
+      height: 10px;
+      position: fixed;
+      top: 0; }
+    .bordaT1 {
+      width: 100%;
+      height: 0%;
+      background: #fff; }
+    .bordaR {
+      width: 10px;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      display: flex;
+      justify-content: flex-end; }
+    .bordaR1 {
+      width: 0%;
+      height: 100%;
+      background: #fff;
+      right: 0; }
+    .bordaB {
+      width: 100%;
+      height: 10px;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end; }
+    .bordaB1 {
+      width: 100%;
+      height: 0%;
+      background: #fff; }
+    .bordaL {
+      width: 10px;
+      height: 100vh;
+      position: fixed;
+      left: 0; }
+    .bordaL1 {
+      width: 0%;
+      height: 100%;
+      background: #fff; } }
+  
+  /********** ABRE 1024 **********/
+  @media only screen and (min-width: 1023px) {
+    .menuMob {
+      display: none; }
+    .menuDesk {
+      display: flex; }
+    h1.tituloHome {
+      padding-left: 18%;
+      font-size: 4.0rem;
+      width: 80%;
+      line-height: 4.0rem; }
+    .boxTitulo {
+      width: 100%; } }
+  
+  /********** ABRE 1024 **********/
+  @media only screen and (min-width: 1365px) {
+    .ctnHeader {
+      top: 30px; }
+    .ctnCentral h1 {
+      width: auto;
+      font-size: 4rem;
+      line-height: 4rem; }
+    .ctnCentral {
+      width: 90%; }
+    .boxDescri p {
+      width: 55%;
+      padding: 20px 0 20px 0; }
+    h5 {
+      font-size: .875rem; }
+    .bordaT, .bordaB {
+      height: 20px; }
+    .bordaR, .bordaL {
+      width: 20px; } }
+  
+  @media only screen and (min-width: 1919px) {
+    .ctnHeader {
+      top: 45px; }
+    .logoHome {
+      height: 60px; }
+    .boxDescri p {
+      width: 48%; }
+    .boxDescri {
+      padding: 40px 20px 0 20px; }
+    .ctnCentral h1 {
+      font-size: 5rem;
+      line-height: 4.9rem; }
+    .boxTriagulo.trianguloHome {
+      left: 8%;
+      top: -108px;
+      height: 320px; }
+    .trigger {
+      width: 86%; }
+    .navegador {
+      left: 12%; }
+    .navegador2 {
+      width: 250px;
+      align-self: flex-start;
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 230px;
+      bottom: auto;
+      top: 85px; }
+    .bordaT, .bordaB {
+      height: 30px; }
+    .bordaR, .bordaL {
+      width: 30px; }
+    .trianguloDesk {
+      height: 215px;
+      top: -25px; }
+    .boxNumeral {
+      right: 35px;
+      top: 35px; } }
+  
+  /********** FECHA MOBILE **********/
+  
+
+
+
+  button {
+    position: fixed;
+    margin-top: 11vh;
+    z-index: 99;
+    left: 6vw;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .sobe {
+    left: 15vw;
+  }
