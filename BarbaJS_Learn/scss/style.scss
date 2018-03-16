@@ -1,0 +1,64 @@
+@import'normal-reset'; @import 'alias-mixins';
+body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    height: 40px;
+    width: 40px;
+    background: pink;
+    z-index: 999;
+    cursor: pointer;
+}
+.holder {
+    @include flex-center;
+    width: 600vw;
+    height: 100vh;
+
+    .ctn-box {
+        @include flex-center;
+        height: 100%;
+        width: 100vw;
+
+        .box {
+            height: 80%;
+            width: 80%;
+        }
+    }
+
+}
+
+
+$sociais: 1 2 3 4 5 6;
+@each $item in $sociais {
+    .ctn-box#{$item} .box{
+        background: url(https://unsplash.it/108#{$item}) center no-repeat;
+        background-size: cover;
+    }
+}
+
+
+.view {
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+.photo {
+    width: 50vw;
+    height: 100vh;
+    background: url(https://unsplash.it/1081) center no-repeat;
+    background-size: cover;
+}
+
+.box-text {
+    width: 40vw;
+    padding: 5vw;
+    color: #fff;
+}
