@@ -202,18 +202,19 @@ a {
   text-decoration: none; }
 
 body {
-  background-color: #000;
+  background-color: #080808;
   overflow: hidden; }
 
 .logo {
   position: fixed;
-  top: 15px;
-  left: 15px;
-  height: 40px;
-  width: 40px;
-  background: pink;
+  top: 36px;
+  left: 53px;
+  height: 49px;
+  width: 49px;
   z-index: 999;
-  cursor: pointer; }
+  cursor: pointer;
+  background: url(../images/logo-efet-branco.svg) center no-repeat;
+  background-size: contain; }
 
 .holder {
   display: flex;
@@ -326,46 +327,26 @@ h2 {
   .ctn-indicator .dyna {
     color: #ff4d4d; }
 
-.ctn-box1 .box {
-  background: url(https://unsplash.it/1081) center no-repeat;
+.ctn-box1 .box, .page1 .photo {
+  background: url(../images/01.jpg) center no-repeat;
   background-size: cover; }
 
-.ctn-box2 .box {
-  background: url(https://unsplash.it/1082) center no-repeat;
+.ctn-box2 .box, .page2 .photo {
+  background: url(../images/02.jpg) center no-repeat;
   background-size: cover; }
 
-.ctn-box3 .box {
-  background: url(https://unsplash.it/1083) center no-repeat;
+.ctn-box3 .box, .page3 .photo {
+  background: url(../images/03.jpg) center no-repeat;
   background-size: cover; }
 
-.ctn-box4 .box {
-  background: url(https://unsplash.it/1084) center no-repeat;
+.ctn-box4 .box, .page4 .photo {
+  background: url(../images/04.jpg) center no-repeat;
   background-size: cover; }
 
-.ctn-box5 .box {
-  background: url(https://unsplash.it/1085) center no-repeat;
+.ctn-box5 .box, .page5 .photo {
+  background: url(../images/05.jpg) center no-repeat;
   background-size: cover; }
 
-.ctn-box6 .box {
-  background: url(https://unsplash.it/1086) center no-repeat;
-  background-size: cover; }
-
-.page1 .photo {
-  background: url(https://unsplash.it/1081) center no-repeat;
-  background-size: cover; }
-
-.page2 .photo {
-  background: url(https://unsplash.it/1082) center no-repeat;
-  background-size: cover; }
-
-.page3 .photo {
-  background: url(https://unsplash.it/1083) center no-repeat;
-  background-size: cover; }
-
-.page4 .photo {
-  background: url(https://unsplash.it/1084) center no-repeat;
-  background-size: cover; }
-
-.page5 .photo {
-  background: url(https://unsplash.it/1085) center no-repeat;
+.ctn-box6 .box, .page6 .photo {
+  background: url(../images/06.jpg) center no-repeat;
   background-size: cover; }

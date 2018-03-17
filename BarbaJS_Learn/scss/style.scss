@@ -1,18 +1,19 @@
 @import'normal-reset'; @import 'alias-mixins';
 body {
-    background-color: #000;
+    background-color: #080808;
     overflow: hidden;
 }
 
 .logo {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    height: 40px;
-    width: 40px;
-    background: pink;
+    top: 36px;
+    left: 53px;
+    height: 49px;
+    width: 49px;
     z-index: 999;
     cursor: pointer;
+    background: url(../images/logo-efet-branco.svg) center no-repeat;
+    background-size: contain;
 }
 .holder {
     @include flex-center;
@@ -133,17 +134,8 @@ h2 {
 }
 $sociais: 1 2 3 4 5 6;
 @each $item in $sociais {
-    .ctn-box#{$item} .box{
-        background: url(https://unsplash.it/108#{$item}) center no-repeat;
-        background-size: cover;
-    }
-}
-
-
-$pages: 1 2 3 4 5;
-@each $photo in $pages {
-    .page#{$photo} .photo{
-        background: url(https://unsplash.it/108#{$photo}) center no-repeat;
+    .ctn-box#{$item} .box, .page#{$item} .photo {
+        background: url(../images/0#{$item}.jpg) center no-repeat;
         background-size: cover;
     }
 }
