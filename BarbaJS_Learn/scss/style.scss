@@ -16,7 +16,7 @@ body {
 }
 .holder {
     @include flex-center;
-    width: 600vw;
+    width: 500vw;
     height: 100vh;
 
     .ctn-box {
@@ -40,7 +40,7 @@ button {
     position: fixed;
     z-index: 10;
     color: #fff;
-    border: 2px solid rgba(255, 255, 255, 0.123);
+    border: 2px solid #ffffff1f;
     padding: 15px;
     top: 41vh;
     font-weight: bold;
@@ -51,7 +51,7 @@ button {
     cursor: pointer;
 
     &:hover {
-        border: 2px solid rgba(252, 88, 88, 0.801);
+        border: 2px solid $color;
         transition: .8s ease;
     }
 }
@@ -87,8 +87,50 @@ button {
     color: #fff;
 }
 
+h1 {
+    color: $color;
+    @include sans;
+    font-weight: bold;
+    font-size: 45px;
+    letter-spacing: 3px;
+}
 
+p {
+    margin-top: 40px;
+    color: #aaa;
+    line-height: 22px;
+    text-align: justify;
+    max-width: 360px;
+}
 
+h2 {
+    opacity: 0.12;
+    font-family: 'Meddon', cursive;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18vw;
+    color: $color;
+}
+
+.ctn-indicator {
+    position: fixed;
+    @include flex-center;
+    left: 87%;
+    bottom: 10%;
+
+    p {
+        font-family: sans-serif;
+        color: #fff;
+        font-size: 12px;
+        margin: 0px 10px;
+    }
+
+    .dyna {
+        color: $color;
+    }
+}
 $sociais: 1 2 3 4 5 6;
 @each $item in $sociais {
     .ctn-box#{$item} .box{
@@ -98,7 +140,7 @@ $sociais: 1 2 3 4 5 6;
 }
 
 
-$pages: 1 2 3 4 5 6;
+$pages: 1 2 3 4 5;
 @each $photo in $pages {
     .page#{$photo} .photo{
         background: url(https://unsplash.it/108#{$photo}) center no-repeat;

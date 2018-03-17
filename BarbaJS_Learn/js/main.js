@@ -1,19 +1,31 @@
 var wScreen = $(window).width(),
     midScreen = wScreen /2,
+    animating = false,
     $holder = $('.holder'),
-    count = 0;
+    $trgNext = $('.trigger-next'),
+    $trgPrev = $('.trigger-prev'),
+    count = 1;
+    
+    function notAnime() { animating = false;}
+    $trgPrev.click(function(){
+        if(count > 1 && !animating) {
+            animating = true;
+            TweenMax.to('.holder',1.8,{x: '+='+wScreen*1, ease: Power3.easeInOut, onComplete: notAnime})
+            count --;
+            $('.dyna').text('0'+count);
+        }
+        
+    });
 
+    $trgNext.click(function(){
+        if(count < 5 && !animating) {
+            animating = true;
+            TweenMax.to('.holder',1.8,{x: '-='+wScreen*1, ease: Power3.easeInOut, onComplete: notAnime})
+            count ++;
+            $('.dyna').text('0'+count);
+        }
+    });
 
-
-/* var tlSlide = new TimelineMax({paused:true})
-    .to('.holder',3,{x: - wScreen*1, ease: Power3.easeOut}).addPause()
-    .to('.holder',3,{x: - wScreen*2, ease: Power3.easeOut}).addPause()
-    .to('.holder',3,{x: - wScreen*3, ease: Power3.easeOut}).addPause()
-    .to('.holder',3,{x: - wScreen*4, ease: Power3.easeOut}).add('label') */
-$('.logo').click(function(){
-    TweenMax.to('.holder',3,{x: '-='+wScreen*1, ease: Power3.easeOut})
-    count ++;
-});
 
 
 
@@ -41,13 +53,15 @@ var ExpandTransition = Barba.BaseTransition.extend({
       var deferred = Barba.Utils.deferred();
 
       
-      if(nameLast == 'box') {      
+      if(nameLast == 'box') {
+          TweenMax.to($trgNext,.8,{xPercent:115, opacity: 0, ease: Power3.easeIn})      
+          TweenMax.to($trgPrev,.8,{xPercent:-115, opacity: 0, ease: Power3.easeIn})      
           TweenMax.to('.box',2,{position:'absolute', left:'0', top:'0', width:'50vw', height:'100vh', ease: Power4.easeInOut, onComplete: function(){ deferred.resolve(); }}) //onComplete      
         }
       
       if(nameLast == 'photo') {      
           let tlOut = new TimelineMax()
-          .to('.box-text',1.6,{ y:200, opacity:0, ease: Power3.easeInOut})
+          .to('.box-text',1.2,{ y:200, opacity:0, ease: Power3.easeInOut})
             .to('.photo',2,{left:midScreen, xPercent: -50, width:'60vw', height:'60vh', ease: Power4.easeInOut, onComplete: function(){ deferred.resolve(); }},.3) //onComplete      
         }
        
@@ -57,37 +71,45 @@ var ExpandTransition = Barba.BaseTransition.extend({
     },
   
     beforeEnter: function() {
-        TweenMax.from('.box-text',1.6,{y:200, opacity:0, ease: Power3.easeOut})
 
-        if(nameLastEnter == 'photo1') {            
-            this.done(); 
+        function goTrg() {
+            TweenMax.fromTo($trgNext,.8,{xPercent:125, opacity: 0}, {xPercent:0, opacity: 1, ease: Power3.easeOut})     
+            TweenMax.fromTo($trgPrev,.8,{xPercent:-125, opacity: 0},{xPercent:0, opacity: 1, ease: Power3.easeOut})     
+        }
+        if(nameLast == 'box') {
+            TweenMax.from('.box-text',1.6,{y:200, opacity:0, ease: Power3.easeOut})
+        }
+
+        if(nameLastEnter == 'photo1') {     
+            goTrg();
         }
 
         else if (nameLastEnter == 'photo2') {            
-            this.done();
-            TweenMax.set('.holder',{x:- wScreen})    
+            
+            TweenMax.set('.holder',{onComplete: goTrg ,x:- wScreen})    
         }
 
         else if (nameLastEnter == 'photo3') {            
-            this.done();
-            TweenMax.set('.holder',{x:- wScreen*2})    
+            
+            TweenMax.set('.holder',{onComplete: goTrg ,x:- wScreen*2})    
         }
 
         else if (nameLastEnter == 'photo4') {            
-            this.done();
-            TweenMax.set('.holder',{x:- wScreen*3})    
+            
+            TweenMax.set('.holder',{onComplete: goTrg ,x:- wScreen*3})    
         }
 
         else if (nameLastEnter == 'photo5') {            
-            this.done();
-            TweenMax.set('.holder',{x:- wScreen*4})    
+            
+            TweenMax.set('.holder',{onComplete: goTrg ,x:- wScreen*4})    
         }
 
         else if (nameLastEnter == 'photo6') {            
-            this.done();
-            TweenMax.set('.holder',{x:- wScreen*5})    
+            
+            TweenMax.set('.holder',{onComplete: goTrg ,x:- wScreen*5})    
         }
-         console.log(count);
+        
+  
             
         this.done();
     }

@@ -219,7 +219,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600vw;
+  width: 500vw;
   height: 100vh; }
   .holder .ctn-box {
     display: flex;
@@ -245,7 +245,7 @@ button {
   position: fixed;
   z-index: 10;
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.123);
+  border: 2px solid #ffffff1f;
   padding: 15px;
   top: 41vh;
   font-weight: bold;
@@ -255,7 +255,7 @@ button {
   transition: .8s ease;
   cursor: pointer; }
   button:hover {
-    border: 2px solid rgba(252, 88, 88, 0.801);
+    border: 2px solid #ff4d4d;
     transition: .8s ease; }
 
 .trigger-next {
@@ -286,6 +286,45 @@ button {
   width: 30vw;
   padding: 5vw;
   color: #fff; }
+
+h1 {
+  color: #ff4d4d;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  letter-spacing: 3px; }
+
+p {
+  margin-top: 40px;
+  color: #aaa;
+  line-height: 22px;
+  text-align: justify;
+  max-width: 360px; }
+
+h2 {
+  opacity: 0.12;
+  font-family: 'Meddon', cursive;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18vw;
+  color: #ff4d4d; }
+
+.ctn-indicator {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 87%;
+  bottom: 10%; }
+  .ctn-indicator p {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 12px;
+    margin: 0px 10px; }
+  .ctn-indicator .dyna {
+    color: #ff4d4d; }
 
 .ctn-box1 .box {
   background: url(https://unsplash.it/1081) center no-repeat;
@@ -329,8 +368,4 @@ button {
 
 .page5 .photo {
   background: url(https://unsplash.it/1085) center no-repeat;
-  background-size: cover; }
-
-.page6 .photo {
-  background: url(https://unsplash.it/1086) center no-repeat;
   background-size: cover; }
