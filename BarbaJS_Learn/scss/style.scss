@@ -21,16 +21,72 @@ body {
 
     .ctn-box {
         @include flex-center;
+        top: 0;
         height: 100%;
         width: 100vw;
+        position: relative;
 
         .box {
-            height: 80%;
-            width: 80%;
+            height: 60%;
+            width: 60%;
+            position: absolute;
         }
     }
 
 }
+
+button {
+    @include clear;
+    position: fixed;
+    z-index: 10;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.123);
+    padding: 15px;
+    top: 41vh;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 3vw;
+    letter-spacing: 2px;
+    transition: .8s ease;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid rgba(252, 88, 88, 0.801);
+        transition: .8s ease;
+    }
+}
+
+.trigger-next {
+    right: 0;
+}
+
+
+.view {
+    @include flex-center;
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+.photo {
+    position: fixed;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background: url(https://unsplash.it/1081) center no-repeat;
+    background-size: cover;
+}
+
+.box-text {
+    position: fixed;
+    right: 5vw;
+    width: 30vw;
+    padding: 5vw;
+    color: #fff;
+}
+
 
 
 $sociais: 1 2 3 4 5 6;
@@ -42,23 +98,10 @@ $sociais: 1 2 3 4 5 6;
 }
 
 
-.view {
-    display: flex;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-}
-.photo {
-    width: 50vw;
-    height: 100vh;
-    background: url(https://unsplash.it/1081) center no-repeat;
-    background-size: cover;
-}
-
-.box-text {
-    width: 40vw;
-    padding: 5vw;
-    color: #fff;
+$pages: 1 2 3 4 5 6;
+@each $photo in $pages {
+    .page#{$photo} .photo{
+        background: url(https://unsplash.it/108#{$photo}) center no-repeat;
+        background-size: cover;
+    }
 }

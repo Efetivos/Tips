@@ -225,11 +225,67 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
     height: 100%;
-    width: 100vw; }
+    width: 100vw;
+    position: relative; }
     .holder .ctn-box .box {
-      height: 80%;
-      width: 80%; }
+      height: 60%;
+      width: 60%;
+      position: absolute; }
+
+button {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+  position: fixed;
+  z-index: 10;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.123);
+  padding: 15px;
+  top: 41vh;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 3vw;
+  letter-spacing: 2px;
+  transition: .8s ease;
+  cursor: pointer; }
+  button:hover {
+    border: 2px solid rgba(252, 88, 88, 0.801);
+    transition: .8s ease; }
+
+.trigger-next {
+  right: 0; }
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0; }
+
+.photo {
+  position: fixed;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background: url(https://unsplash.it/1081) center no-repeat;
+  background-size: cover; }
+
+.box-text {
+  position: fixed;
+  right: 5vw;
+  width: 30vw;
+  padding: 5vw;
+  color: #fff; }
 
 .ctn-box1 .box {
   background: url(https://unsplash.it/1081) center no-repeat;
@@ -255,21 +311,26 @@ body {
   background: url(https://unsplash.it/1086) center no-repeat;
   background-size: cover; }
 
-.view {
-  display: flex;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0; }
-
-.photo {
-  width: 50vw;
-  height: 100vh;
+.page1 .photo {
   background: url(https://unsplash.it/1081) center no-repeat;
   background-size: cover; }
 
-.box-text {
-  width: 40vw;
-  padding: 5vw;
-  color: #fff; }
+.page2 .photo {
+  background: url(https://unsplash.it/1082) center no-repeat;
+  background-size: cover; }
+
+.page3 .photo {
+  background: url(https://unsplash.it/1083) center no-repeat;
+  background-size: cover; }
+
+.page4 .photo {
+  background: url(https://unsplash.it/1084) center no-repeat;
+  background-size: cover; }
+
+.page5 .photo {
+  background: url(https://unsplash.it/1085) center no-repeat;
+  background-size: cover; }
+
+.page6 .photo {
+  background: url(https://unsplash.it/1086) center no-repeat;
+  background-size: cover; }
