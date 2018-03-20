@@ -50,14 +50,23 @@ function setup() {
 console.log("All files loaded");
   //Create the cat sprite
    
-var graphics = new PIXI.Graphics();
-   graphics.beginFill(0xFF700B, 1);
-   graphics.drawRect(wScreen/3, 0, wScreen/1.8, hScreen);
-   
-   graphics.drawRect(wScreen/3, 0, wScreen/1.8, hScreen);
-   // graphics.beginFill(0xFF700B, 1);
-   // graphics.drawRect(100, 0, wScreen/3, hScreen);
-   
+
+
+  var retBg = new PIXI.Graphics();
+        retBg.beginFill(0xFF700B, 1);
+        retBg.drawRect(wScreen/3, 0, wScreen/1.8, hScreen);
+        retBg.drawRect(wScreen/3, 0, wScreen/1.8, hScreen);
+
+
+
+var retSplit = new PIXI.Graphics();
+    retSplit.beginFill(0xFF700B, 1);
+    retSplit.drawRect(-(wScreen*.4), 0, wScreen/1.4, hScreen);
+    retSplit.drawRect(-(wScreen*.4), -hScreen, wScreen/1.4, hScreen);
+
+
+
+
 
    be1 = new Sprite(resources.be2.texture);
    be1.anchor.set(0.5);
@@ -68,30 +77,22 @@ var graphics = new PIXI.Graphics();
 
    
    container.addChild(be1, be2);
-   app.stage.addChild(graphics);
-   be2.mask = graphics;
+   container.addChild(retSplit);
+   be2.mask = retSplit;
 
    //TweenLite.to(be1, 1, {pixi:{blur:20}});
    
     TweenLite.set(be1, {pixi:{scale:1.3}});
-   TweenLite.set(be1,{pixi:{colorize:"black", colorizeAmount:.3}})
-   TweenMax.set(graphics,{pixi:{skewX:-20, scaleY: 1.08}})
+    TweenLite.set(be1,{pixi:{colorize:"black", colorizeAmount:.3}})
+    TweenMax.set(retSplit,{pixi:{skewX:-20, scaleY: 1.08}})
+
+
+var move = wScreen * 1.2;
    
-  var tlMoveGraph = new TimelineMax({yoyo:true, repeat:-1})
-     .from(graphics,1.9,{pixi:{x:-wScreen, scaleY: 1.08}, ease: Power3.easeOut})
-   
-     .to(graphics,1.9,{pixi:{x:wScreen, scaleY: 1.08}, ease: Power3.easeIn})
-   
-//    var moveIt = wScreen /2;
-//    var tlPixi = new TimelineMax()
-//       .from(be2,4,{pixi:{x: moveIt/4}, ease: Power4.easeInOut})
-//       .from(be1, 3,{pixi:{x: -moveIt/2}, ease: Power3.easeInOut},.5)
-      
-      
-//    $(window).click( function(){
-//       tlPixi.play(0)
-//       tlPixiText.play(0)
-//    })    
+  var tlMoveGraph = new TimelineMax({repeat: -1})
+     .from(retSplit,1.9,{pixi:{x:- move, scaleY: 1.08}, ease: Power3.easeOut})
+     .to(retSplit,2.9,{pixi:{x:move, scaleY: 1.08}, ease: Power3.easeOut})
+
 }
 
 
