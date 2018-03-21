@@ -168,10 +168,24 @@ var retSplit4 = new PIXI.Graphics();
     TweenMax.set([retBg, retBg2, retBg3, retBg4],{pixi:{skewX:-20, scaleX: 1.4, scaleY: 1.08}})
     TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{skewX:-20, scaleY: 1.08}})
 
+    //SCALE MOBILE
+    if($(window).width() < 1024) {
+        TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{scaleX: 2}})
+        TweenMax.set([retBg, retBg2, retBg3, retBg4],{pixi:{scaleX: 3}})
+    }
 
-    var move = wScreen * 1.2,
+    var move = wScreen*2.8,
         time = 2.6,
         myEase = Power4.easeInOut;
+
+        if($(window).width() > 1024) {
+            move = wScreen * 1.2
+        }
+         if($(window).width() > 1800) {
+            move = wScreen /1.005
+            
+        TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{scaleX: 0.7}})
+         }
    
     var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})
     
