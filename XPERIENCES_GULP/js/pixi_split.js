@@ -1,7 +1,7 @@
 var wScreen = $(window).width();
 var hScreen = $(window).height();
 // ---------- alias photo ...
-var baseUrl = 'https://raw.githubusercontent.com/Efetivos/Barbara_vue/master/src/components/images/galeria/';
+var baseUrl = 'https://raw.githubusercontent.com/Efetivos/nicole_vue/master/src/components/images/galeria/';
 
 const main = document.querySelector("#main");
 
@@ -35,6 +35,12 @@ loader
    .add('ph2', 'https://i.imgur.com/QVbaeM5.jpg')
    .add('ph3', 'https://i.imgur.com/yXUuQ4X.jpg')
    .add('ph4', 'https://i.imgur.com/vaUjhCo.jpg')
+
+
+/*     .add('ph1', baseUrl + 'nicole1.jpg')
+    .add('ph2', baseUrl + 'nicole4.jpg')
+    .add('ph3', baseUrl + 'nicole5.jpg')
+    .add('ph4', baseUrl + 'nicole6.jpg') */
   //.on("progress", loadindFunction) //function while loading Sprites
   .load(setup);//Call Function after Loading
 
@@ -155,45 +161,38 @@ var retSplit4 = new PIXI.Graphics();
 
 
 
-
-
-
-
-
-
-
-
-   //TweenLite.to(ph1, 1, {pixi:{blur:20}});
+   //TweenLite.to([ph1, ph2, ph3, ph4], 1, {pixi:{blur:6}});
    
-    TweenLite.set([ph1, ph2, ph3, ph4], {pixi:{scale:1.3}});
-    TweenLite.set([ph1, ph2, ph3, ph4],{pixi:{colorize:"black", colorizeAmount:.3}})
+    TweenLite.set([ph1, ph2, ph3, ph4], {pixi:{scale:1.8}});
+    TweenLite.set([ph1, ph2, ph3, ph4],{pixi:{colorize:"white", colorizeAmount:.6}})
     TweenMax.set([retBg, retBg2, retBg3, retBg4],{pixi:{skewX:-20, scaleX: 1.4, scaleY: 1.08}})
     TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{skewX:-20, scaleY: 1.08}})
 
 
     var move = wScreen * 1.2,
-        time = 2.8;
+        time = 2.6,
+        myEase = Power4.easeInOut;
    
-    var tlMoveGraph = new TimelineMax({repeat: -1})
+    var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})
     
-        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: Power3.easeInOut})
-        .from(retSplit, time, {pixi:{x:- move}, ease: Power3.easeInOut},0)
-        .to(retSplit, time, {pixi:{x:move}, ease: Power3.easeInOut},'juntos2')
+        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase})
+        .from(retSplit, time, {pixi:{x:- move}, ease: myEase},0)
+        .to(retSplit, time, {pixi:{x:move}, ease: myEase},'juntos2')
     
         //SLIDE2
-        .from(retBg2, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: Power3.easeInOut},'juntos2')
-        .from(retSplit2, time, {pixi:{x:- move}, ease: Power3.easeInOut},'juntos2')
-        .to(retSplit2, time, {pixi:{x:move}, ease: Power3.easeInOut},'juntos3')
+        .from(retBg2, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos2')
+        .from(retSplit2, time, {pixi:{x:- move}, ease: myEase},'juntos2')
+        .to(retSplit2, time, {pixi:{x:move}, ease: myEase},'juntos3')
     
         //SLIDE3
-        .from(retBg3, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: Power3.easeInOut},'juntos3')
-        .from(retSplit3, time, {pixi:{x:- move}, ease: Power3.easeInOut},'juntos3')
-        .to(retSplit3, time, {pixi:{x:move}, ease: Power3.easeInOut},'juntos4')
+        .from(retBg3, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos3')
+        .from(retSplit3, time, {pixi:{x:- move}, ease: myEase},'juntos3')
+        .to(retSplit3, time, {pixi:{x:move}, ease: myEase},'juntos4')
     
         //SLIDE4
-        .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: Power3.easeInOut},'juntos4')
-        .from(retSplit4, time, {pixi:{x:- move}, ease: Power3.easeInOut},'juntos4')
-        .to(retSplit4, time, {pixi:{x:move}, ease: Power3.easeInOut})
+        .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos4')
+        .from(retSplit4, time, {pixi:{x:- move}, ease: myEase},'juntos4')
+        .to(retSplit4, time, {pixi:{x:move}, ease: myEase})
 
 }
 
