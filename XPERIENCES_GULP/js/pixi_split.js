@@ -188,30 +188,24 @@ var retSplit4 = new PIXI.Graphics();
          }
    
     var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})    
-        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase})
+        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))},onStart: outTitle, ease: myEase})
         .from(retSplit, time, {pixi:{x:- move}, ease: myEase},0).addPause()
         .to(retSplit, time, {pixi:{x:move}, ease: myEase},'juntos2')
     
         //SLIDE2
-        .from(retBg2, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos2')
-        .from(retSplit2, time, {pixi:{x:- move}, ease: myEase},'juntos2')
+        .from(retBg2, time, {pixi:{x:-(move + (wScreen/4.8))},onStart: outTitle2, ease: myEase},'juntos2')
+        .from(retSplit2, time, {pixi:{x:- move}, ease: myEase},'juntos2').addPause()
         .to(retSplit2, time, {pixi:{x:move}, ease: myEase},'juntos3')
     
         //SLIDE3
-        .from(retBg3, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos3')
-        .from(retSplit3, time, {pixi:{x:- move}, ease: myEase},'juntos3')
+        .from(retBg3, time, {pixi:{x:-(move + (wScreen/4.8))}, onStart: outTitle3, ease: myEase},'juntos3')
+        .from(retSplit3, time, {pixi:{x:- move}, ease: myEase},'juntos3').addPause()
         .to(retSplit3, time, {pixi:{x:move}, ease: myEase},'juntos4')
     
         //SLIDE4
-        .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos4')
-        .from(retSplit4, time, {pixi:{x:- move}, ease: myEase},'juntos4')
+        .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, onStart: outTitle4, ease: myEase},'juntos4')
+        .from(retSplit4, time, {pixi:{x:- move}, ease: myEase},'juntos4').addPause()
         .to(retSplit4, time, {pixi:{x:move}, ease: myEase})
-
-
-
-
-
-
 
 
 
@@ -220,16 +214,87 @@ var retSplit4 = new PIXI.Graphics();
 // JS OF HTML
 // ===========================================================================
 var titleW = $('.title').width() * 1.2,
-    titleH = $('.title').height() + 10;
+    titleH = $('.title').height() + 10,
+    delayTime = 1.25,
+    count = 1
 
     TweenMax.set('.holder-title',{width: titleW, height: titleH});
-    TweenMax.to('.wrap-title',.4,{delay:1.4, width:'0%'})
-    TweenMax.to('.title',.4,{delay:1.4, x:-titleW})
 
-    //GSDevTools.create();
+    var tlTitleIn = new TimelineMax({paused:true})
+        .from('.title2', .8, {xPercent: -100, ease: Power3.easeOut}).addPause()
+        .from('.title3', .8, {xPercent: -100, ease: Power3.easeOut}).addPause()
+        .from('.title4', .8, {xPercent: -100, ease: Power3.easeOut}).addPause()
+        .from('.title5', .8, {xPercent: -100, ease: Power3.easeOut}).addPause()
+   
+    function outTitle(){
+        var tlTitle = new TimelineMax()
+            .to('.wrap-title1',.4,{delay: delayTime, width:'0%'})
+            .to('.title1',.4,{delay: delayTime, x:-titleW},0)
+            .add(function(){tlTitleIn.play()})
+    }
+   
+    function outTitle2(){
+        var tlTitle = new TimelineMax()
+            .to('.wrap-title2',.4,{delay: delayTime, width:'0%'})
+            .to('.title2',.4,{delay: delayTime, x:-titleW},0)
+            .add(function(){tlTitleIn.play()})
+    }
+   
+    function outTitle3(){
+        var tlTitle = new TimelineMax()
+            .to('.wrap-title3',.4,{delay: delayTime, width:'0%'})
+            .to('.title3',.4,{delay: delayTime, x:-titleW},0)
+            .add(function(){tlTitleIn.play()})
+    }
+   
+    function outTitle4(){
+        var tlTitle = new TimelineMax()
+            .to('.wrap-title4',.4,{delay: delayTime, width:'0%'})
+            .to('.title4',.4,{delay: delayTime, x:-titleW},0)
+            .add(function(){tlTitleIn.play()})
+    }
 
 
-}
+  /* -------------- MOUSE WHEEL---------------- */
+  $(window).bind('mousewheel DOMMouseScroll', function(event){
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        count --
+        alert(count)
+        if(count == 1) {
+            outTitle2();
+        }
+        tlMoveGraph.reverse()
+    }
+    else {
+        count ++
+        tlMoveGraph.play()
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} //close Setup Pixi
 
 
 let resized = true; 
