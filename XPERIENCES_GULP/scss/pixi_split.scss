@@ -1,8 +1,12 @@
-@import'normal-reset'; @import 'alias-mixins';body {
+@import'normal-reset'; @import 'alias-mixins';
+
+body {
     margin: 0;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
  }
  main {
+   z-index: -1;
    position: fixed;
    overflow: hidden;
    top: 0;
@@ -12,3 +16,39 @@
    touch-action: none;  
    background: #000;
  }
+
+
+
+
+//       <!-- -------------- Sublime Title -----------------  -->
+
+.ctn-title {
+  position: fixed;
+  z-index: 1;
+  right: 0vw;
+  top: 12vh;
+
+  .holder-title {
+    position: relative;
+    width: 128px;
+    height: 16px;
+
+    .wrap-title {
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      right: 0;
+
+      h1.title {
+        left: 0;
+        position: absolute;
+        font-weight: bold;
+        color: #fff;
+        font-size: 22px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+}

@@ -137,6 +137,7 @@ var retSplit3 = new PIXI.Graphics();
 
 
 
+
 // --------------
 // ----- --------------- Slide2 
 // ----- ------ -------------------------------- 
@@ -182,15 +183,13 @@ var retSplit4 = new PIXI.Graphics();
             move = wScreen * 1.2
         }
          if($(window).width() > 1800) {
-            move = wScreen /1.005
-            
-        TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{scaleX: 0.7}})
+            move = wScreen /1.005;            
+            TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{scaleX: 0.7}})
          }
    
-    var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})
-    
+    var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})    
         .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase})
-        .from(retSplit, time, {pixi:{x:- move}, ease: myEase},0)
+        .from(retSplit, time, {pixi:{x:- move}, ease: myEase},0).addPause()
         .to(retSplit, time, {pixi:{x:move}, ease: myEase},'juntos2')
     
         //SLIDE2
@@ -207,6 +206,28 @@ var retSplit4 = new PIXI.Graphics();
         .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},'juntos4')
         .from(retSplit4, time, {pixi:{x:- move}, ease: myEase},'juntos4')
         .to(retSplit4, time, {pixi:{x:move}, ease: myEase})
+
+
+
+
+
+
+
+
+
+
+//
+// JS OF HTML
+// ===========================================================================
+var titleW = $('.title').width() * 1.2,
+    titleH = $('.title').height() + 10;
+
+    TweenMax.set('.holder-title',{width: titleW, height: titleH});
+    TweenMax.to('.wrap-title',.4,{delay:1.4, width:'0%'})
+    TweenMax.to('.title',.4,{delay:1.4, x:-titleW})
+
+    //GSDevTools.create();
+
 
 }
 
@@ -246,3 +267,6 @@ function onResize() {
 
 
 }
+
+
+
