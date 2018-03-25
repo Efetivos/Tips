@@ -8,7 +8,7 @@
     <title>IMN Clone | Working</title>
     <link rel="stylesheet" href="css/imn-clone-style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald|Yrsa:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:700|Yrsa:300,400" rel="stylesheet">
 </head>
 <body>
 
@@ -20,10 +20,17 @@
     </div>
     <img src="images/logo-imn.png" alt="" class="imn-logo">
 
-    <!-- scroll down -->
-    <div class="scroll-down">
-        <img src="images/down-arrow.svg" alt="" class="svg-down">
-    </div>
+    <!-- scroll down -->                
+    <button class="ctn-scroll-down">
+        <div class="holder-scroll-down  e-flex">
+            <div class="scroll-down">
+                <img src="images/down-arrow.svg" alt="" class="svg-down">
+            </div>
+
+            <div class="page-indicator decor">HOME</div>
+        </div>
+    </button>
+
 
 
     <!-- triggers -->
@@ -52,8 +59,61 @@
     </div>
 
 
+        <!-- -------------------- SECTION 1 -------------------- -->
+        <section class="section-header s1">
+            <div class="box-photo bp1">
+                <div class="photo"></div>
+                <video id="bgvid" autoplay muted="muted" loop>
+                        <source src="./images/home.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                <div class="bg-pat"></div>
+            </div>
+    
+            <div class="ctn-infos-section">
+                <div class="holder-infos e-flex-col">
+    
+                    <div class="holder holder-h1">
+                            <img src="images/symbol_imn.svg" alt="" class="symbol-decor">
+                            <img src="images/decor2.png" alt="" class="symbol-decor">
+                            <h1 class="title-section e-white">
+                                <span>O instituto de nutrologia</span>
+                                <span>que faz <span class="e-italic"> a diferença</span></span>
+                            </h1>
+                    </div>
+    
+                    
+                    <!-- <div class="holder holder-h2">
+                        <div class="wrap wrap-h2">
+                            <h2 class="h2-section e-white e-serif">Apenas seja!</h2>
+                        </div>
+                    </div>
+                     -->
+    
+    
+                    <!-- <div class="holder holder-p">
+                        <div class="wrap wrap-p">
+                            <p class="p-section e-white e-serif">Levando tudo à outro nível</p>
+                        </div>
+                    </div> -->
+
+    
+                </div>
 
 
+                
+            </div>
+        </section> <!-- close-section -->
+
+
+
+
+
+
+
+
+
+    
 
 
 </body>

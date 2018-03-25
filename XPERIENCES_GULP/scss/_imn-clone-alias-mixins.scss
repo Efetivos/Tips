@@ -15,7 +15,7 @@ $cor2: #888;
 }
 
 @mixin mobile {
-	@media only screen and (max-width: 960px) {
+	@media only screen and (max-width: 1024px) {
 		@content;		
 	}
 }
