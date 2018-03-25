@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 920.6 758.1" style="enable-background:new 0 0 920.6 758.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#005C99;}
+	.st1{fill:#3E86C6;}
+	.st2{fill:#1D6AAF;}
+	.st3{fill:#104674;}
+</style>
 <g>
-	<polygon style="fill:#005C99;" points="460.3,0 920.6,758.1 0,758.1 	"/>
-	<polygon style="fill:#3E86C6;" points="460.3,352 920.6,758.1 0,758.1 	"/>
-	<polygon style="fill:#1D6AAF;" points="460.3,0 460.3,352 920.6,758.1 	"/>
-	<polygon style="fill:#104674;" points="460.3,0 0,758.1 460.3,352 	"/>
+	<polygon class="st0" points="460.3,0 920.6,758.1 0,758.1 	"/>
+	<polygon class="st1" points="460.3,352 920.6,758.1 0,758.1 	"/>
+	<polygon class="st2" points="460.3,0 460.3,352 920.6,758.1 	"/>
+	<polygon class="st3" points="460.3,0 0,758.1 460.3,352 	"/>
 </g>
 </svg>

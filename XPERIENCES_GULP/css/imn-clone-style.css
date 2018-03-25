@@ -308,7 +308,7 @@ button.ctn-scroll-down {
   position: fixed;
   right: 5vw;
   z-index: 1;
-  top: 50%;
+  bottom: 2%;
   transform: translate(-50%, -50%); }
   @media only screen and (max-width: 1024px) {
     .ctn-triggers {
@@ -390,9 +390,17 @@ video#bgvid {
   position: relative; }
   .holder-h1 .symbol-decor {
     position: absolute;
-    width: 210px; }
+    width: 210px;
+    margin-left: -15%; }
   .holder-h1 h1 {
     z-index: 1; }
+
+.decor-line {
+  margin-left: -25% !important; }
+  @media only screen and (min-width: 1025px) {
+    .decor-line {
+      margin-left: -30% !important;
+      margin-top: -8px !important; } }
 
 .s1 .holder {
   display: flex;
@@ -417,9 +425,24 @@ video#bgvid {
   @media only screen and (min-width: 580px) and (max-width: 1024px) {
     .s1 .holder-h1 {
       width: 65vw; } }
+  @media only screen and (min-width: 1025px) {
+    .s1 .holder-h1 {
+      width: 62vw;
+      margin-top: -22vh; } }
+  @media only screen and (min-width: 1800px) {
+    .s1 .holder-h1 {
+      width: 1020px; } }
   .s1 .holder-h1 .symbol-decor {
     position: absolute;
     width: 73%; }
+    @media only screen and (min-width: 1025px) {
+      .s1 .holder-h1 .symbol-decor {
+        margin-left: -15vw;
+        width: 55%;
+        margin-top: -5vh; } }
+    @media only screen and (min-width: 1800px) {
+      .s1 .holder-h1 .symbol-decor {
+        margin-left: -36% !important; } }
   .s1 .holder-h1 h1 {
     margin-left: 6vw;
     font-size: calc(40px + 54 * ((53vw + 53vh) - 520px) / 820); }
@@ -428,7 +451,10 @@ video#bgvid {
         font-size: calc(36px + 54 * ((45vw + 53vh) - 520px) / 820); } }
     @media only screen and (min-width: 1025px) {
       .s1 .holder-h1 h1 {
-        font-size: calc(50px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+        font-size: calc(41px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+    @media only screen and (min-width: 1800px) {
+      .s1 .holder-h1 h1 {
+        font-size: 82px; } }
 
 .s1 .holder-h2 h2 {
   font-size: calc(28px + 54 * ((22vw + 53vh) - 520px) / 820);
@@ -684,37 +710,37 @@ video#bgvid {
 .bp1 .photo {
   background: url(https://unsplash.it/1091) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp2 .photo {
   background: url(https://unsplash.it/1092) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp3 .photo {
   background: url(https://unsplash.it/1093) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp4 .photo {
   background: url(https://unsplash.it/1094) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp5 .photo {
   background: url(https://unsplash.it/1095) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp6 .photo {
   background: url(https://unsplash.it/1096) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp7 .photo {
   background: url(https://unsplash.it/1097) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .gs-dev-tools {
   z-index: 99999;

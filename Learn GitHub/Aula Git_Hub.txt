@@ -1,0 +1,174 @@
+gitGit & GitHub (Controle de Versão)
+
+Descobrir Infos do user:
+>> git config user.name  (Usuário)
+>> git config user.email  (email)
+
+
+ENTRAR NA PASTA PELO CMD/NODE
+cd (arrastar pasta para o cmd ou copiar path(caminho) )
+
+
+INICIAR GIT:
+>> git init
+
+VER ESTADO DOS ARQUIVOS NO GIT:
+>> git status
+	On Branch (Mostra qual Branch estamos localizado)
+	Initial commit (qual commit foi ultimo)
+	nothing to commit (nada para commitar)
+
+ESTAGIOS> //digitar git status
+
+- UNTRACKED > (NÃO VISTO PELO GIT)
+>> git add (NomeArquivo)
+
+- UNMODIFIED > (VISTO / MAS NÃO MODIFICADO)
+>> modificar
+
+- MODIFIED > (MODIFICADO / PRONTO PARA COMMITAR)
+>> git add (NomeArquivo)
+
+STAGED > (COMMITADO)
+>> git commit -m "Nomear Mudança"
+
+
+*** COMANDOS IMPORTANTES  ***
+
+>> git log --graph 
+//(Ver graficos dos Logs/Alterações)
+
+>> git show  
+//(Ver o que foi alterado)
+
+>> git show (numeroDoCommit) 
+//(Ver o que foi alterado no log especifico)
+
+>> git diff 
+//(ver o que alterou antes de dar COMMIT)
+
+>> git diff --name-only 
+//(ver apenas arquivos modificados)
+
+>> git checkout 
+//(desfazer o que foi feito)
+
+>> git reset    --soft (apenas remove commit)  
+		--mixed (apenas remove e tem que add) 
+		--hard (Remove tudo que foi feito)
+
+----- GITHUB 
+Criar repositório no : https://github.com/Efetivos/
+
+>> git remote add origin https://github.com/Efetivos/learningGit.git
+//INICIA O REPOSITORIO NO GITHUB
+
+>> git push -u origin master 
+//UPLOAD DO REPOSITORIO PASTA REMOTA
+
+
+ **** BRANCHS (Marcadores para tratar VERSÕES SEM AFETAR O PRINCIPAL)
+>> git checkout -b (nomeDoBranch)
+//CRIA O BRANCH
+
+>> git branch 
+//Mostra o Branchs
+Lista os nomes dos Branchs
+* nomeBranch (asterisco indica qual Branch está trabalhando) 
+
+>>git checkout master (nome do Branch)
+//altera o branch atual
+
+>> git branch -D (nomedoBranch) 
+// Deleta o branch selecionado
+
+
+*** UNINDO COM BRANCHS
+>>git checkout master //Voltar para o Master
+>>git rebase nomeDoBranch
+>>git push //subirParaRemote
+
+
+** EXTRA: 
+>> git stash //Salva provisoriamente
+>> git stash apply // Puxar o arquivo profissorio
+
+**ALIAS: (Alias/Atalhas
+>>git config --global alias.(AtalhoQueQuiser) status(o Comando que quiser) 
+
+**TAGS
+>> git tag -a 1.0.0 -m 'Descricao Tag' 
+//AdicionaV Tag com Versão
+
+>> git push origin master --tags 
+//UpLoad da Tag Release
+
+>>git tag
+//Lista Tags
+
+>>git origin: nomedaTag
+//Apaga a Tag do Remoto
+
+
+
+
+---------- SUBINDO PROJETOS GRANDES ---------
+3.1) Preparação Inicial
+
+Vá em http://github.com e clique em "Pricing and signup" e depois "Create an free account" para criar sua conta gratuita.
+
+Tendo cadastrado e logado em sua conta, agora você precisa de uma chave SSH para poder começar a comitar. No Git Bash digite:
+
+
+
+----ssh-keygen -t rsa -C "seu_email@email.com"
+Informe no comando seu e-mail cadastrado no GitHub. Dê Enter na próxima pergunta (sobre o arquivo a ser criado - vamos deixar o padrão).
+
+A próxima pergunta vai te pedir uma senha (passphrase). Invente uma senha e a informe. Ele vai pedir uma confirmação. Digite a senha novamente e Enter. Digite agora:
+
+------- notepad ~/.ssh/id_rsa.pub
+para abrir no Bloco de Notas o arquivo que foi criado.
+
+Agora no GitHub, vá em ------  "Account Settings" e depois "SSH Public Keys" ----- . Clique "Add another public key". Informe um título para identificar o computador onde a a chave foi gerada e no campo "Key" cole todo o conteúdo do arquivo id_rsa.pub (que você abriu no Bloco de Notas)
+
+Inserindo a chave SSH
+
+Tome cuidado de copiar e colar todo o conteúdo do arquivo, começando por "ssh-rsa ..." até o seu e-mail (incluindo ele, como na imagem). Clique em "Add Key".
+
+Vamos testar pra ver se essa bagaça deu certo. No Git Bash digite:
+
+-------  ssh -T git@github.com
+Ele vai perguntar se você tem certeza que quer conectar bla bla bla (yes/no). Digite yes e Enter. Na próxima pergunta (Enter passphrase...) informe sua senha (a que você escolheu ao criar a chave SSH).
+
+Se você receber uma mensagem do tipo:
+
+Hi doug2k1! You've successfully authenticated, but GitHub does not provide shell access.
+Então tudo deu certo!
+
+
+ssh-keygen -t rsa -C victor.efetivos@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -131,7 +131,7 @@ button.ctn-scroll-down {
     position: fixed;
     right: $gutterW;
     z-index: 1;
-    top: 50%;
+    bottom: 2%;
     transform: translate(-50%, -50%);
 
     .box-trigger {
@@ -230,15 +230,24 @@ video.bgvid {
     .symbol-decor {
         position: absolute;    
         width: 210px;
+        margin-left: -15%;
     }
 
     h1 {
         z-index: 1;
     }
+}
 
-
+.decor-line {
+    margin-left: -25% !important;
+    @include desk {        
+        margin-left: -30% !important;
+        margin-top: -8px !important;
+        
+    }
     
 }
+
 
 .s1 .holder {
     @include flex-center;
@@ -267,11 +276,28 @@ video.bgvid {
        @include tablet {
            width: 65vw;
        }
+       @include desk {
+           width: 62vw;
+           margin-top: -22vh;           
+       }
+       @include hd {
+        width: 1020px;           
+       }
+
 
         .symbol-decor {
             position: absolute;    
             width: 73%;
+            @include desk {
+                margin-left: -15vw;
+                width: 55%;
+                margin-top: -5vh;            
+            }
+            @include hd {
+                margin-left: -36% !important;
+            }
         }
+        
         h1 {
             margin-left: 6vw;
             font-size: calc(40px + 54 * ((53vw + 53vh) - 520px) / 820);
@@ -279,7 +305,10 @@ video.bgvid {
                 font-size: calc(36px + 54 * ((45vw + 53vh) - 520px) / 820);
             }
             @include desk{
-                font-size: calc(50px + 54 * ((45vw + 53vh) - 520px) / 820);            
+                font-size: calc(41px + 54 * ((45vw + 53vh) - 520px) / 820);            
+            }
+            @include hd {
+                font-size: 82px;                
             }
         }
     }
@@ -626,7 +655,7 @@ $images: 1 2 3 4 5 6 7;
     .bp#{$item} .photo{
         background: url(https://unsplash.it/109#{$item}) center no-repeat;
         background-size: cover;
-        opacity: 0.7;
+        opacity: 0.6;
     }
 }
 
