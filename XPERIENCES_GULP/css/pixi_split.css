@@ -204,7 +204,8 @@ a {
 body {
   margin: 0;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  color: #fff; }
 
 main {
   z-index: -1;
@@ -222,6 +223,10 @@ main {
   z-index: 1;
   right: 0vw;
   top: 12vh; }
+  @media only screen and (min-width: 1025px) {
+    .ctn-title {
+      right: 18vw;
+      top: 32vh; } }
   .ctn-title .holder-title {
     position: relative;
     width: 128px;
@@ -234,8 +239,49 @@ main {
       right: 0; }
       .ctn-title .holder-title .wrap-title h1.title {
         left: 0;
+        text-transform: uppercase;
         position: absolute;
         font-weight: bold;
         color: #fff;
         font-size: 22px;
         white-space: nowrap; }
+        @media only screen and (min-width: 1025px) {
+          .ctn-title .holder-title .wrap-title h1.title {
+            font-size: 42px; } }
+
+.ctn-links {
+  position: fixed;
+  top: 5vh;
+  right: 15vw; }
+  .ctn-links .holder-links {
+    position: relative; }
+    .ctn-links .holder-links a.link-top {
+      color: white;
+      font-size: 11px;
+      margin: 0 25px;
+      letter-spacing: 2px; }
+
+.ctn-btn-orca {
+  position: fixed;
+  bottom: 6vh;
+  left: 5vw; }
+  .ctn-btn-orca button.holder-orca {
+    position: relative;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.29);
+    padding: 5px 40px;
+    border-radius: 50px; }
+    .ctn-btn-orca button.holder-orca a.orca {
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      color: #fff;
+      margin-top: -2px;
+      line-height: 0; }

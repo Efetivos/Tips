@@ -4,6 +4,7 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
  }
  main {
    z-index: -1;
@@ -20,13 +21,17 @@ body {
 
 
 
-//       <!-- -------------- Sublime Title -----------------  -->
+//  <!-- -------------- Sublime Title -----------------  -->
 
 .ctn-title {
   position: fixed;
   z-index: 1;
   right: 0vw;
   top: 12vh;
+  @include desk {
+    right: 18vw;
+    top: 32vh;    
+  }
 
   .holder-title {
     position: relative;
@@ -42,13 +47,64 @@ body {
 
       h1.title {
         left: 0;
+        text-transform: uppercase;
         position: absolute;
         font-weight: bold;
         color: #fff;
         font-size: 22px;
         white-space: nowrap;
+        //text-shadow: 1px 1px 0px rgb(0, 0, 0);
+        @include desk {
+          font-size: 42px;
+          
+        }
       }
     }
   }
 
+}
+
+
+//  <!-- --------------  LINK -----------------  -->
+
+.ctn-links {
+  position: fixed;
+  top: 5vh;
+  right: 15vw;
+
+  .holder-links {
+    position: relative;
+
+    a.link-top {
+      color: rgb(255, 255, 255);
+      font-size: 11px;
+      margin:0 25px ;
+      letter-spacing: 2px;
+      //text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    }
+  }
+}
+
+.ctn-btn-orca {
+  position: fixed;
+  bottom: 6vh;
+  left: 5vw;
+
+  button.holder-orca{
+    position: relative;
+    @include clear;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.29);
+    padding: 5px 40px;
+    border-radius: 50px;
+
+    a.orca {
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      color: #fff;
+      margin-top: -2px;
+      line-height: 0;
+    }
+  }
 }

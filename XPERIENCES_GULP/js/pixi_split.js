@@ -29,12 +29,13 @@ const container = new PIXI.Container();
 app.stage.addChild(container);
 
 
+
 // ---------- Load Images ...
 loader 
-   .add('ph1', 'https://i.imgur.com/G21DasO.jpg')
-   .add('ph2', 'https://i.imgur.com/QVbaeM5.jpg')
-   .add('ph3', 'https://i.imgur.com/yXUuQ4X.jpg')
-   .add('ph4', 'https://i.imgur.com/vaUjhCo.jpg')
+   .add('ph1', 'https://raw.githubusercontent.com/Efetivos/gallery/master/houses/house4.jpg')
+   .add('ph2', 'https://raw.githubusercontent.com/Efetivos/gallery/master/houses/house2.jpg')
+   .add('ph3', 'https://raw.githubusercontent.com/Efetivos/gallery/master/houses/house5.jpg')
+   .add('ph4', 'https://raw.githubusercontent.com/Efetivos/gallery/master/houses/house1.jpg')
 
 
 /*     .add('ph1', baseUrl + 'nicole1.jpg')
@@ -164,8 +165,8 @@ var retSplit4 = new PIXI.Graphics();
 
    //TweenLite.to([ph1, ph2, ph3, ph4], 1, {pixi:{blur:6}});
    
-    TweenLite.set([ph1, ph2, ph3, ph4], {pixi:{scale:1.8}});
-    TweenLite.set([ph1, ph2, ph3, ph4],{pixi:{colorize:"white", colorizeAmount:.6}})
+    TweenLite.set([ph1, ph2, ph3, ph4], {pixi:{scale:1.25}});
+    TweenLite.set([ph1, ph2, ph3, ph4],{pixi:{colorize:'#fff', colorizeAmount:.65}})
     TweenMax.set([retBg, retBg2, retBg3, retBg4],{pixi:{skewX:-20, scaleX: 1.4, scaleY: 1.08}})
     TweenMax.set([retSplit, retSplit2, retSplit3, retSplit4],{pixi:{skewX:-20, scaleY: 1.08}})
 
@@ -188,21 +189,25 @@ var retSplit4 = new PIXI.Graphics();
          }
    
     var tlMoveGraph = new TimelineMax({repeat: -1, yoyo:true})    
-        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))},onStart: outTitle, ease: myEase})
+        .from(ph1, time/1.2, {pixi:{blur:50}, ease: myEase},0)
+        .from(retBg, time, {pixi:{x:-(move + (wScreen/4.8))}, ease: myEase},0)
         .from(retSplit, time, {pixi:{x:- move}, ease: myEase},0).addPause()
         .to(retSplit, time, {pixi:{x:move}, ease: myEase},'juntos2')
     
         //SLIDE2
+        .from(ph2, time/1.2, {pixi:{blur:50}, ease: myEase},'juntos2')
         .from(retBg2, time, {pixi:{x:-(move + (wScreen/4.8))},onStart: outTitle2, ease: myEase},'juntos2')
         .from(retSplit2, time, {pixi:{x:- move}, ease: myEase},'juntos2').addPause()
         .to(retSplit2, time, {pixi:{x:move}, ease: myEase},'juntos3')
     
         //SLIDE3
+        .from(ph3, time/1.2, {pixi:{blur:50}, ease: myEase},'juntos3')
         .from(retBg3, time, {pixi:{x:-(move + (wScreen/4.8))}, onStart: outTitle3, ease: myEase},'juntos3')
         .from(retSplit3, time, {pixi:{x:- move}, ease: myEase},'juntos3').addPause()
         .to(retSplit3, time, {pixi:{x:move}, ease: myEase},'juntos4')
     
         //SLIDE4
+        .from(ph4, time/1.2, {pixi:{blur:50}, ease: myEase},'juntos4')
         .from(retBg4, time, {pixi:{x:-(move + (wScreen/4.8))}, onStart: outTitle4, ease: myEase},'juntos4')
         .from(retSplit4, time, {pixi:{x:- move}, ease: myEase},'juntos4').addPause()
         .to(retSplit4, time, {pixi:{x:move}, ease: myEase})
@@ -259,10 +264,6 @@ var titleW = $('.title').width() * 1.2,
   $(window).bind('mousewheel DOMMouseScroll', function(event){
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
         count --
-        alert(count)
-        if(count == 1) {
-            outTitle2();
-        }
         tlMoveGraph.reverse()
     }
     else {
