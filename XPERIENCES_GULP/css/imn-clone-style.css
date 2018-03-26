@@ -322,7 +322,7 @@ button.ctn-scroll-down {
   position: fixed;
   right: 5vw;
   z-index: 1;
-  bottom: 2%;
+  bottom: -4vh;
   transform: translate(-50%, -50%); }
   @media only screen and (max-width: 1024px) {
     .ctn-triggers {
@@ -330,12 +330,40 @@ button.ctn-scroll-down {
   .ctn-triggers .box-trigger {
     cursor: pointer;
     padding: 5px;
-    margin: 11px 5px; }
+    margin: 19px 5px; }
     .ctn-triggers .box-trigger .trigger {
-      height: 4px;
-      width: 4px;
-      background: #ccc;
-      border-radius: 50%; }
+      height: 6px;
+      width: 6px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      position: absolute;
+      margin-left: -13px; }
+
+.line-trg {
+  height: 2px;
+  width: 29px;
+  background: #0089d0;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -2px; }
+
+.holder-indic-trg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .holder-indic-trg .holder-p {
+    justify-content: space-between;
+    height: 20px;
+    width: 45px;
+    position: absolute; }
+    .holder-indic-trg .holder-p p {
+      font-size: 15px;
+      position: absolute;
+      letter-spacing: 2px;
+      font-weight: 400; }
+    .holder-indic-trg .holder-p .numb2 {
+      margin-left: 10px; }
 
 section {
   display: flex;
@@ -554,10 +582,9 @@ video#bgvid {
         line-height: 42px; } }
     @media only screen and (min-width: 1025px) {
       .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
-        width: 81%;
+        width: 74%;
         font-size: 69px;
-        line-height: 58px;
-        } }
+        line-height: 58px; } }
     @media only screen and (min-width: 1800px) {
       .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
         font-size: 100px;

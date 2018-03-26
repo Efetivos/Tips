@@ -7,13 +7,30 @@ var time = .6,
     timeFader = 1.4,
     pageIndic = $('.page-indicator');
 
+
+    function changeIndic (section) {
+        var myVar = section.slice(-1),
+            minus = myVar-1
+            last = '.trg-dot'+minus
+        TweenMax.staggerFromTo(section+' .numb', .8 , {cycle:{y:["20", "-20"]},opacity:0},{y:0, opacity:1},.2)
+        TweenMax.fromTo(section+' .line-trg',.6,{scaleX:0, transformOrigin:'left'},{scaleX:1})
+        TweenMax.fromTo(section+' .trigger',.3,{opacity:1},{opacity:0})
+
+        
+        TweenMax.staggerFromTo(last+' .numb', .8 ,{y:0, opacity:1}, {cycle:{y:["20", "-20"]},opacity:0},.2)
+        TweenMax.fromTo(last+' .line-trg',.6,{scaleX:1},{scaleX:0, transformOrigin:'left'})
+        TweenMax.fromTo(last+' .trigger',1.2,{opacity:0},{opacity:1})
+        
+    }
+
+
     //var tlTrans = new TimelineMax({ id:'tlTrans'})
     var tlTrans = new TimelineMax({paused:true, id:'tlTrans'})
         .to('.s1 .box-photo', timeFader,{height:'0%', ease: Power3.easeInOut})
         .to('.s1 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},.4)
 
         // in s2
-        .add(function(){ pageIndic.text('SOBRE') })
+        .add(function(){ pageIndic.text('SOBRE'); changeIndic('.trg-dot1'); })
         .staggerFrom('.s2 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos')
         .from('.s2 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos')
         .from('.s2 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos')
@@ -34,7 +51,7 @@ var time = .6,
         .to('.s2 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out2+=.2')
 
         // in s3
-        .add(function(){ pageIndic.text('QUEM SOMOS') })
+        .add(function(){ pageIndic.text('QUEM SOMOS'); changeIndic('.trg-dot2'); })
         .staggerFrom('.s3 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos3')
         .from('.s3 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos3')
         .from('.s3 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos3')
@@ -57,7 +74,7 @@ var time = .6,
         .to('.s3 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out3+=.2')
 
         // in s4
-        .add(function(){ pageIndic.text('ESPECIALIDADES') })
+        .add(function(){ pageIndic.text('ESPECIALIDADES') ; changeIndic('.trg-dot3'); })
         .staggerFrom('.s4 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos5')
         .from('.s4 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos5')
         .from('.s4 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos5')
@@ -80,7 +97,7 @@ var time = .6,
         .to('.s4 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out4+=.2')
 
         // in s5
-        .add(function(){ pageIndic.text('NOSSO CONTATO') })
+        .add(function(){ pageIndic.text('NOSSO CONTATO') ; changeIndic('.trg-dot4'); })
         .staggerFrom('.s5 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos7')
         .from('.s5 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos7')
         .from('.s5 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos7')
@@ -110,12 +127,18 @@ var time = .6,
         
         
         
+var tlIndicatorTrg = new TimelineMax({paused:true})
+    .staggerFrom('.numb', .8 , {cycle:{y:["20", "-20"]},opacity:0},.2)
+    .from('.line-trg',.6,{scaleX:0, transformOrigin:'left'})
 
 
 
-        
+
+
+
+
  //       <!-- -------------------- TL INIT -------------------- -->
-var tlSlideSection = new TimelineMax({delay:2, id:'InitTl'})
+/* var tlSlideSection = new TimelineMax({delay:2, id:'InitTl'})
     .staggerFrom('.s1 h1',.8,{cycle:{y:["-20", "20"]},opacity:0},.2)
     .from('.s1 .line-triang', 1.6, { drawSVG:"0%", yPercent:-40,  ease: Power3.easeOut},.8)
     .from('.s1 .part1', 2.2, { opacity:0, yPercent: 40,  ease: Power3.easeOut},.8)
@@ -123,7 +146,7 @@ var tlSlideSection = new TimelineMax({delay:2, id:'InitTl'})
     .staggerFrom('.box-trigger',.8,{cycle:{x:["-10"]}, opacity:0},.2,3.1)
     .from('.ctn-scroll-down',1.8,{yPercent:40, opacity:0},3)
     .from('.trigger-menu, .imn-logo',1.8,{yPercent:-20, opacity:0},3)
-
+ */
 
 
 

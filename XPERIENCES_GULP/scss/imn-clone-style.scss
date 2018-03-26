@@ -148,25 +148,56 @@ button.ctn-scroll-down {
     position: fixed;
     right: $gutterW;
     z-index: 1;
-    bottom: 2%;
+    bottom: -4vh;
     transform: translate(-50%, -50%);
 
     .box-trigger {
         cursor: pointer;
         padding: 5px;
-        margin: 11px 5px;
+        margin: 19px 5px;
 
         .trigger {
-            height: 4px;
-            width: 4px;
-            background: #ccc;
+            height: 6px;
+            width: 6px;
+            border: 1px solid #ccc;
             border-radius: 50%;
+            position: absolute;
+            margin-left: -13px;
         }
     }
 
 }
 
+.line-trg {
+    height: 2px;
+    width: 29px;
+    background: $cor;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -2px;
+}
 
+.holder-indic-trg {
+    position: relative;
+    @include flex-center;
+
+    .holder-p {
+        justify-content: space-between;
+        height: 20px;
+        width: 45px;
+        position: absolute;
+        p {
+            font-size: 15px;
+            position: absolute;
+            letter-spacing: 2px;
+            font-weight: 400;
+            
+        }
+        .numb2 {
+            margin-left: 10px;
+        }
+    }
+}
 
 
 
