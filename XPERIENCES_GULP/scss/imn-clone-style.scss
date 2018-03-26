@@ -58,6 +58,7 @@ $gutterW: 5vw;
     color: lighten($cor,40%);
 }
 
+
 // -------------------- init project --------------------
 
 
@@ -86,7 +87,7 @@ img.imn-logo {
     top: 2vh;
     left: $gutterW;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 162px;
 }
 
@@ -96,7 +97,8 @@ button.ctn-scroll-down {
     position: fixed;
     left: $gutterW;
     bottom: 12vh;
-    z-index: 1;
+    z-index: 2;
+    cursor: pointer;
 
     .scroll-down {
         @include flex-center;
@@ -280,6 +282,7 @@ video.bgvid {
 
 
 .s1 {
+    z-index: 1;
     .holder-infos {
         margin-top: 0vh;
        @include desk {
@@ -704,7 +707,10 @@ video.bgvid {
 
 
 
-
+.e-fixed {
+    z-index: 2;
+    position: fixed;
+}
 
 
 $images: 3 4 5 6 7;
@@ -716,6 +722,20 @@ $images: 3 4 5 6 7;
     }
 }
 
+
+// ---------------------- zINDEX -------------
+.s2 {
+    z-index: -2;
+}
+.s3 {
+    z-index: -3;
+}
+.s4 {
+    z-index: -4;
+}
+.s5 {
+    z-index: -5;
+}
 
 .gs-dev-tools {  z-index: 99999;  position: fixed; }
 

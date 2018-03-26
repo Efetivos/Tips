@@ -267,7 +267,7 @@ img.imn-logo {
   top: 2vh;
   left: 5vw;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 162px; }
 
 button.ctn-scroll-down {
@@ -281,7 +281,8 @@ button.ctn-scroll-down {
   position: fixed;
   left: 5vw;
   bottom: 12vh;
-  z-index: 1; }
+  z-index: 2;
+  cursor: pointer; }
   button.ctn-scroll-down .scroll-down {
     display: flex;
     justify-content: center;
@@ -424,83 +425,82 @@ video#bgvid {
   margin-top: 0;
   position: relative; }
 
-.s1 .holder-infos {
-  margin-top: 0vh; }
-  @media only screen and (min-width: 1025px) {
-    .s1 .holder-infos {
-      margin-top: 38vh; } }
-
-.s1 .holder-h1 {
-  margin-top: -7vh; }
-  @media only screen and (min-width: 580px) and (max-width: 1024px) {
-    .s1 .holder-h1 {
-      width: 65vw; } }
-  @media only screen and (min-width: 1025px) {
-    .s1 .holder-h1 {
-      width: 62vw;
-      margin-top: -22vh; } }
-  @media only screen and (min-width: 1800px) {
-    .s1 .holder-h1 {
-      width: 1020px; } }
-  .s1 .holder-h1 .holder-decor {
-    width: 308px;
-    margin-left: -23%;
-    margin-top: -6%; }
+.s1 {
+  z-index: 1; }
+  .s1 .holder-infos {
+    margin-top: 0vh; }
+    @media only screen and (min-width: 1025px) {
+      .s1 .holder-infos {
+        margin-top: 38vh; } }
+  .s1 .holder-h1 {
+    margin-top: -7vh; }
     @media only screen and (min-width: 580px) and (max-width: 1024px) {
-      .s1 .holder-h1 .holder-decor {
-        width: 360px; } }
+      .s1 .holder-h1 {
+        width: 65vw; } }
     @media only screen and (min-width: 1025px) {
-      .s1 .holder-h1 .holder-decor {
-        right: auto;
-        width: 400px;
-        margin-left: -35%; } }
+      .s1 .holder-h1 {
+        width: 62vw;
+        margin-top: -22vh; } }
     @media only screen and (min-width: 1800px) {
-      .s1 .holder-h1 .holder-decor {
-        width: 510px; } }
-    @media only screen and (min-width: 1025px) {
-      .s1 .holder-h1 .holder-decor .decor-line {
-        margin-left: -15%;
-        margin-top: 7%; } }
-  .s1 .holder-h1 h1 {
-    margin-left: 6vw;
-    font-size: calc(40px + 54 * ((53vw + 53vh) - 520px) / 820); }
+      .s1 .holder-h1 {
+        width: 1020px; } }
+    .s1 .holder-h1 .holder-decor {
+      width: 308px;
+      margin-left: -23%;
+      margin-top: -6%; }
+      @media only screen and (min-width: 580px) and (max-width: 1024px) {
+        .s1 .holder-h1 .holder-decor {
+          width: 360px; } }
+      @media only screen and (min-width: 1025px) {
+        .s1 .holder-h1 .holder-decor {
+          right: auto;
+          width: 400px;
+          margin-left: -35%; } }
+      @media only screen and (min-width: 1800px) {
+        .s1 .holder-h1 .holder-decor {
+          width: 510px; } }
+      @media only screen and (min-width: 1025px) {
+        .s1 .holder-h1 .holder-decor .decor-line {
+          margin-left: -15%;
+          margin-top: 7%; } }
+    .s1 .holder-h1 h1 {
+      margin-left: 6vw;
+      font-size: calc(40px + 54 * ((53vw + 53vh) - 520px) / 820); }
+      @media only screen and (min-width: 580px) and (max-width: 1024px) {
+        .s1 .holder-h1 h1 {
+          font-size: calc(36px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+      @media only screen and (min-width: 1025px) {
+        .s1 .holder-h1 h1 {
+          letter-spacing: -2px;
+          font-size: calc(46px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+      @media only screen and (min-width: 1800px) {
+        .s1 .holder-h1 h1 {
+          letter-spacing: -2px;
+          font-size: 95px; } }
+  .s1 .holder-h2 h2 {
+    font-size: calc(28px + 54 * ((22vw + 53vh) - 520px) / 820);
+    letter-spacing: 1px; }
     @media only screen and (min-width: 580px) and (max-width: 1024px) {
-      .s1 .holder-h1 h1 {
-        font-size: calc(36px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+      .s1 .holder-h2 h2 {
+        font-size: calc(22px + 54 * ((22vw + 53vh) - 520px) / 820); } }
     @media only screen and (min-width: 1025px) {
-      .s1 .holder-h1 h1 {
-        letter-spacing: -2px;
-        font-size: calc(46px + 54 * ((45vw + 53vh) - 520px) / 820); } }
+      .s1 .holder-h2 h2 {
+        font-size: calc(18px + 54 * ((22vw + 53vh) - 520px) / 820);
+        letter-spacing: 2px; } }
     @media only screen and (min-width: 1800px) {
-      .s1 .holder-h1 h1 {
-        letter-spacing: -2px;
-        font-size: 95px; } }
-
-.s1 .holder-h2 h2 {
-  font-size: calc(28px + 54 * ((22vw + 53vh) - 520px) / 820);
-  letter-spacing: 1px; }
-  @media only screen and (min-width: 580px) and (max-width: 1024px) {
-    .s1 .holder-h2 h2 {
-      font-size: calc(22px + 54 * ((22vw + 53vh) - 520px) / 820); } }
-  @media only screen and (min-width: 1025px) {
-    .s1 .holder-h2 h2 {
-      font-size: calc(18px + 54 * ((22vw + 53vh) - 520px) / 820);
-      letter-spacing: 2px; } }
-  @media only screen and (min-width: 1800px) {
-    .s1 .holder-h2 h2 {
-      font-size: calc(16px + 54 * ((22vw + 53vh) - 520px) / 820); } }
-
-.s1 .holder-p {
-  margin-top: 3vh;
-  color: #0089d0;
-  font-size: calc(22px + 54 * ((12vw + 53vh) - 520px) / 820); }
-  @media only screen and (min-width: 580px) and (max-width: 1024px) {
-    .s1 .holder-p {
-      font-size: calc(16px + 54 * ((12vw + 53vh) - 520px) / 820); } }
-  @media only screen and (min-width: 1025px) {
-    .s1 .holder-p {
-      margin-top: 5vh;
-      font-size: 18px; } }
+      .s1 .holder-h2 h2 {
+        font-size: calc(16px + 54 * ((22vw + 53vh) - 520px) / 820); } }
+  .s1 .holder-p {
+    margin-top: 3vh;
+    color: #0089d0;
+    font-size: calc(22px + 54 * ((12vw + 53vh) - 520px) / 820); }
+    @media only screen and (min-width: 580px) and (max-width: 1024px) {
+      .s1 .holder-p {
+        font-size: calc(16px + 54 * ((12vw + 53vh) - 520px) / 820); } }
+    @media only screen and (min-width: 1025px) {
+      .s1 .holder-p {
+        margin-top: 5vh;
+        font-size: 18px; } }
 
 @media only screen and (min-width: 1025px) {
   .s1 .photo {
@@ -589,6 +589,10 @@ video#bgvid {
   .s2 button.link-page img.arrow-go-page, .s3 button.link-page img.arrow-go-page, .s4 button.link-page img.arrow-go-page, .s5 button.link-page img.arrow-go-page {
     width: 10px; }
 
+.e-fixed {
+  z-index: 2;
+  position: fixed; }
+
 .bp3 .photo {
   background: url(https://unsplash.it/g/1093) center no-repeat;
   background-size: cover;
@@ -613,6 +617,18 @@ video#bgvid {
   background: url(https://unsplash.it/g/1097) center no-repeat;
   background-size: cover;
   opacity: 0.6; }
+
+.s2 {
+  z-index: -2; }
+
+.s3 {
+  z-index: -3; }
+
+.s4 {
+  z-index: -4; }
+
+.s5 {
+  z-index: -5; }
 
 .gs-dev-tools {
   z-index: 99999;
