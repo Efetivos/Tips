@@ -55,7 +55,8 @@ var time = .6,
         .from('.s2 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos')
         .from('.s2 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos')
 
-        .addPause()   // roll up s2
+        .addPause()   /* roll up s2*/         
+        .to('.s2 .photo', time*1.6, { backgroundPosition:'bottom',ease: Power3.easeInOut},'juntos2')
         .from('.s2 .holder-infos',time*1.5,{yPercent:60, ease: Power4.easeInOut},'juntos2')
         .staggerFrom('.s2 h1',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos2')
         .staggerFrom('.s2 .holder-decor',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos2')
@@ -71,12 +72,13 @@ var time = .6,
         .to('.s2 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out2+=.2')
 
         // in s3
-        .add(function(){ pageIndic.text('QUEM SOMOS');})
+        .add(function(){ pageIndic.text('QUEM SOMOS');}) 
         .staggerFrom('.s3 h1',time,{cycle:{y:["-20", "20"]},opacity:0, onStart:function(){  changeInInit('.trg-dot2');},  onReverseComplete: function(){ changeInOut('.trg-dot1');} },.2,'juntos3')
         .from('.s3 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos3')
         .from('.s3 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos3')
 
         .addPause()   // roll up s3
+        .to('.s3 .photo', time*1.6, { backgroundPosition:'bottom',ease: Power3.easeInOut},'juntos4')
         .from('.s3 .holder-infos',time*1.5,{yPercent:60, ease: Power4.easeInOut},'juntos4')
         .staggerFrom('.s3 h1',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos4')
         .staggerFrom('.s3 .holder-decor',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos4')
@@ -99,7 +101,8 @@ var time = .6,
         .from('.s4 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos5')
         .from('.s4 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos5')
 
-        .addPause()   // roll up s4
+        .addPause()   // roll up s4        
+        .to('.s4 .photo', time*1.6, { backgroundPosition:'bottom',ease: Power3.easeInOut},'juntos6')
         .from('.s4 .holder-infos',time*1.5,{yPercent:60, ease: Power4.easeInOut},'juntos6')
         .staggerFrom('.s4 h1',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos6')
         .staggerFrom('.s4 .holder-decor',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos6')
@@ -123,6 +126,7 @@ var time = .6,
         .from('.s5 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos7')
 
         .addPause()   // roll up s5
+        .to('.s5 .photo', time*1.6, { backgroundPosition:'bottom',ease: Power3.easeInOut},'juntos8')
         .from('.s5 .holder-infos',time*1.5,{yPercent:60, ease: Power4.easeInOut},'juntos8')
         .staggerFrom('.s5 h1',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos8')
         .staggerFrom('.s5 .holder-decor',time,{yPercent:40, ease: Power2.easeInOut},.06,'juntos8')
