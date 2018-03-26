@@ -759,7 +759,7 @@ video.bgvid {
 }
 
 
-$images: 3 4 5 6 7;
+$images:1 2 3 4 5 6 7;
 @each $item in $images {
     .bp#{$item} .photo{
         background: url(https://unsplash.it/g/109#{$item}) center no-repeat;
@@ -768,6 +768,12 @@ $images: 3 4 5 6 7;
     }
 }
 
+.s1 .photo, .s2 .photo {
+    @include desk {
+        display: none;
+    }
+    
+}
 
 // ---------------------- zINDEX -------------
 .s2 {

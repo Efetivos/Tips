@@ -634,6 +634,16 @@ video#bgvid {
   z-index: 2;
   position: fixed; }
 
+.bp1 .photo {
+  background: url(https://unsplash.it/g/1091) center no-repeat;
+  background-size: cover;
+  opacity: 0.6; }
+
+.bp2 .photo {
+  background: url(https://unsplash.it/g/1092) center no-repeat;
+  background-size: cover;
+  opacity: 0.6; }
+
 .bp3 .photo {
   background: url(https://unsplash.it/g/1093) center no-repeat;
   background-size: cover;
@@ -658,6 +668,10 @@ video#bgvid {
   background: url(https://unsplash.it/g/1097) center no-repeat;
   background-size: cover;
   opacity: 0.6; }
+
+@media only screen and (min-width: 1025px) {
+  .s1 .photo, .s2 .photo {
+    display: none; } }
 
 .s2 {
   z-index: -2; }
