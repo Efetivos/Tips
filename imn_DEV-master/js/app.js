@@ -150,7 +150,7 @@ tl1
 .to(".bordaL1", 0.4, { width:"100%"},'juntoBorda1')
 .to(".lt1", 0.5, { width:"0%"},"-=0.5")
 .to(".tc1", 0.5, { scale:1, backgroundColor:"transparent"},"-=0.5")
-.to(".ctnCentral", 1.2, {ease: Expo.easeInOut, y:"300px", opacity:0},"-=0.1")
+.to(".ctnCentral", .8, {y:"300px", opacity:0},"-=0.1")
 .to(".main",timeMain,{ease: Expo.easeInOut, top:"-100vh"})
 .to(".lt2", 0.5, { width:"100%"},"-=1")
 .to(".tc2", 0.5, { scale:1.7, backgroundColor:"#fff"},"-=1")
@@ -159,15 +159,15 @@ tl1
 .to(".bordaB1", 0.5, { height:"0%"},'juntoBorda2')
 .to(".bordaL1", 0.5, { width:"0%"},'juntoBorda2')
 .to(".ctnCentral", time, {ease: Expo.easeInOut, y:"250px", opacity:1},"-=1")
-.from(".foto2 .trianguloDesk", time, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
-.from(".foto2 .boxNumeral", time, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
+.from(".foto2 .trianguloDesk", 1.5, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
+.from(".foto2 .boxNumeral", 1.5, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
 /////slider 2
 .addPause()
 .to(".foto2", 1, {ease: Expo.easeInOut, backgroundPosition: "bottom" })
 .to(".ctnCentral", 1, {ease: Expo.easeInOut, y:"0px", opacity:1},"-=1")
-.from(".foto2 .bordaHome", timeLinha,{width:"0", autoAlpha:"0"},"-=0.1")
+.from(".foto2 .bordaHome", timeLinha,{width:0, autoAlpha:"0"},"-=0.1")
 .from(".foto2 .boxDescri p", time,{autoAlpha:"0"},"-=0.5")
-.from(".foto2 .btnSaiba", 0.5,{autoAlpha:"0"},"-=0.8")
+.from(".foto2 .btnSaiba", 1.1,{autoAlpha:"0"},"-=0.3")
 .addPause()
 .to(".bordaT1", 0.4, { height:"100%"})
 .to(".bordaR1", 0.4, { width:"100%"},"-=0.4")
@@ -175,7 +175,7 @@ tl1
 .to(".bordaL1", 0.4, { width:"100%"},"-=0.4")
 .to(".lt2", 0.5, { width:"0%"},"-=0.5")
 .to(".tc2", 0.5, { scale:1, backgroundColor:"transparent"},"-=0.5")
-.to(".ctnCentral", 1.2, {ease: Expo.easeInOut, y:"300px", opacity:0},"-=0.1")
+.to(".ctnCentral", .8, {y:"300px", opacity:0},"-=0.1")
 .to(".main",timeMain,{ease: Expo.easeInOut, top:"-200vh"})
 .to(".lt3", 0.5, { width:"100%"},"-=1")
 .to(".tc3", 0.5, { scale:1.7, backgroundColor:"#fff"},"-=1")
@@ -184,14 +184,14 @@ tl1
 .to(".bordaB1", 0.5, { height:"0%"},"-=0.5")
 .to(".bordaL1", 0.5, { width:"0%"},"-=0.5")
 .to(".ctnCentral", time, {ease: Expo.easeInOut, y:"250px", opacity:1},"-=1")
-.from(".foto3 .trianguloDesk", time, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
-.from(".foto3 .boxNumeral", time, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
+.from(".foto3 .trianguloDesk", 1.5, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
+.from(".foto3 .boxNumeral", 1.5, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
 .addPause()
 .to(".foto3", 1, {ease: Expo.easeInOut, backgroundPosition: "bottom" })
 .to(".ctnCentral", 1, {ease: Expo.easeInOut, y:"0px", opacity:1},"-=1")
-.from(".foto3 .bordaHome", timeLinha,{width:"0", autoAlpha:"0"},"-=0.1")
+.from(".foto3 .bordaHome", timeLinha,{width:0, autoAlpha:"0"},"-=0.1")
 .from(".foto3 .boxDescri p", time,{autoAlpha:"0"},"-=0.5")
-.from(".foto3 .btnSaiba", 0.5,{autoAlpha:"0"},"-=0.8")
+.from(".foto3 .btnSaiba", 1.1,{autoAlpha:"0"},"-=0.3")
 
 
 ////slider 3
@@ -202,7 +202,7 @@ tl1
 .to(".bordaL1", 0.4, { width:"100%"},"-=0.4")
 .to(".lt3", 0.5, { width:"0%"},"-=0.5")
 .to(".tc3", 0.5, { scale:1, backgroundColor:"transparent"},"-=0.5")
-.to(".ctnCentral", 1.2, {ease: Expo.easeInOut, y:"300px", opacity:0},"-=0.1")
+.to(".ctnCentral", .8, {y:"300px", opacity:0},"-=0.1")
 .to(".main",timeMain,{ease: Expo.easeInOut, top:"-300vh"})
 .to(".lt4", 0.5, { width:"100%"},"-=1")
 .to(".tc4", 0.5, { scale:1.7, backgroundColor:"#fff"},"-=1")
@@ -211,14 +211,14 @@ tl1
 .to(".bordaB1", 0.5, { height:"0%"},"-=0.5")
 .to(".bordaL1", 0.5, { width:"0%"},"-=0.5")
 .to(".ctnCentral", time, {ease: Expo.easeInOut, y:"250px", opacity:1},"-=1")
-.from(".foto4 .trianguloDesk", time, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
-.from(".foto4 .boxNumeral", time, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
+.from(".foto4 .trianguloDesk", 1.5, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
+.from(".foto4 .boxNumeral", 1.5, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
 .addPause()
 .to(".foto4", 1, {ease: Expo.easeInOut, backgroundPosition: "bottom" })
 .to(".ctnCentral", 1, {ease: Expo.easeInOut, y:"0px", opacity:1},"-=1")
-.from(".foto4 .bordaHome", timeLinha,{width:"0", autoAlpha:"0"},"-=0.1")
+.from(".foto4 .bordaHome", timeLinha,{width:0, autoAlpha:"0"},"-=0.1")
 .from(".foto4 .boxDescri p", time,{autoAlpha:"0"},"-=0.5")
-.from(".foto4 .btnSaiba", 0.5,{autoAlpha:"0"},"-=0.8")
+.from(".foto4 .btnSaiba", 1.1,{autoAlpha:"0"},"-=0.3")
 
 
 
@@ -230,7 +230,7 @@ tl1
 .to(".bordaL1", 0.4, { width:"100%"},"-=0.4")
 .to(".lt4", 0.5, { width:"0%"},"-=0.5")
 .to(".tc4", 0.5, { scale:1, backgroundColor:"transparent"},"-=0.5") 
-.to(".ctnCentral", 1.2, {ease: Expo.easeInOut, y:"300px", opacity:0},"-=0.1")
+.to(".ctnCentral", .8, {y:"300px", opacity:0},"-=0.1")
 .to(".main",timeMain,{ease: Expo.easeInOut, top:"-400vh"})
 .to(".lt5", 0.5, { width:"100%"},"-=1")
 .to(".tc5", 0.5, { scale:1.7, backgroundColor:"#fff"},"-=1")
@@ -239,17 +239,17 @@ tl1
 .to(".bordaB1", 0.5, { height:"0%"},"-=0.5")
 .to(".bordaL1", 0.5, { width:"0%"},"-=0.5")
 .to(".ctnCentral", time, {ease: Expo.easeInOut, y:"250px", opacity:1},"-=1")
-.from(".foto5 .trianguloDesk", time, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
-.from(".foto5 .boxNumeral", time, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
+.from(".foto5 .trianguloDesk", 1.5, {ease: Expo.easeInOut, scale:2, opacity:0},"-=1")
+.from(".foto5 .boxNumeral", 1.5, {ease: Expo.easeInOut, x:"100px", opacity:0},"-=0.7")
 
 
 /////slider 5
 .addPause()
 .to(".foto5", 1, {ease: Expo.easeInOut, backgroundPosition: "bottom" })
 .to(".ctnCentral", 1, {ease: Expo.easeInOut, y:"0px", opacity:1},"-=1")
-.from(".foto5 .bordaHome", timeLinha,{width:"0", autoAlpha:"0"},"-=0.1")
+.from(".foto5 .bordaHome", timeLinha,{width:0,autoAlpha:"0"},"-=0.1")
 .from(".foto5 .boxDescri p", time,{autoAlpha:"0"},"-=0.5")
-.from(".foto5 .btnSaiba", 0.5,{autoAlpha:"0"},"-=0.8");
+.from(".foto5 .btnSaiba", 1.1,{autoAlpha:"0"},"-=0.3");
 
 
 
@@ -266,6 +266,47 @@ $(window).bind('mousewheel DOMMouseScroll', function(event){
         tl1.play()
     }
 });
+
+document.addEventListener('touchstart', handleTouchStart, false);    
+document.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;  
+var yDown = null;                                                        
+
+function handleTouchStart(evt) {                                       
+    xDown = evt.touches[0].clientX;  
+    yDown = evt.touches[0].clientY; 
+};                                                
+
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;   
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            alert('Left'); /* Left swipe */
+        } else {
+             alert('Right'); /* Right swipe */
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+			tl1.play() /* UP swipe */
+        } else { 
+			tl1.reverse() /* down swipe */
+        }    
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
 
 
 

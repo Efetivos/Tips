@@ -1,0 +1,112 @@
+@import'normal-reset'; @import 'alias-mixins';
+body {
+    overflow-x: hidden !important;
+}
+
+
+h1 {
+    color: #fff;
+}
+
+
+.e-white {
+    color: #fff;
+}
+
+.e-red {
+    color: $cor;
+}
+
+.e-flex-col {
+    @include flex-center-col;
+    position: relative;
+}
+
+.e-flex {
+    @include flex-center;
+    position: relative;
+}
+
+.e-flex-start {    
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+}
+
+.e-serif {
+    @include serif;
+}
+
+
+
+// <!-- --------------- CTN SLIDE TRIGGER ------------- -->
+.ctn-slide-trigger {
+    position: relative;
+
+    .holder-slider-trg {
+        @include flex-center-col;
+        width: 100vw;
+    }
+    
+    .box-photo-galeria-trg {
+        @include flex-center;
+        width: 100vw;
+        height: 80vh;
+        margin-top: 17vh;
+    
+        .photo-trg {
+            width: 90%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+// <!-- --------------- CTN LIGHTBOX ------------- -->
+.ctn-slide-lightbox {
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    .holder-slide-lightbox  {
+        @include flex-center;
+        position: relative;
+        width: 100vw;
+    }
+    
+    .box-photo-galeria-lb {
+        @include flex-center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    
+        .photo-trg {
+            width: 95%;
+            height: 95%;
+
+            @include desk {
+                width: 94vw;
+                height: 97vh;
+            }
+        }
+    }
+}
+
+
+
+
+$photo: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+@each $item in $photo {
+    .bp#{$item} .photo-trg{
+        background: url(../image/foto#{$item}.png) center no-repeat;
+        background-size: cover;
+    }
+}
+
