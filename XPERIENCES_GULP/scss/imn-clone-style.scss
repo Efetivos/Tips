@@ -99,6 +99,9 @@ button.ctn-scroll-down {
     bottom: 12vh;
     z-index: 2;
     cursor: pointer;
+    @include desk {
+        bottom: 7vh;
+    }
 
     .scroll-down {
         @include flex-center;
@@ -117,13 +120,25 @@ button.ctn-scroll-down {
     }
 
     .page-indicator {
-        font-size: 14px;
+        font-size: 13px;
+        letter-spacing: 1px;
         font-weight: bolder;
         margin-left: 14px;
     }
 }
 .holder-scroll-down {
     position: relative;
+
+    .traco-scroll-down {
+        height: 1px;
+        width: 38px;
+        background: #ccc;
+        opacity: 0.4;
+        margin-left: 15px;
+        @include mobile {
+            display: none;
+        }
+    }
 }
 
 .ctn-triggers {
@@ -408,7 +423,7 @@ video.bgvid {
 .s2, .s3 , .s4 , .s5 {
 
     .box-photo {
-        background: darken($cor,20%);
+        background: #003363;
 
         .photo {
         }

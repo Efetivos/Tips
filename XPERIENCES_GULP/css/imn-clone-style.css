@@ -283,6 +283,9 @@ button.ctn-scroll-down {
   bottom: 12vh;
   z-index: 2;
   cursor: pointer; }
+  @media only screen and (min-width: 1025px) {
+    button.ctn-scroll-down {
+      bottom: 7vh; } }
   button.ctn-scroll-down .scroll-down {
     display: flex;
     justify-content: center;
@@ -298,12 +301,22 @@ button.ctn-scroll-down {
     button.ctn-scroll-down .scroll-down img.svg-down {
       width: 8px; }
   button.ctn-scroll-down .page-indicator {
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
     font-weight: bolder;
     margin-left: 14px; }
 
 .holder-scroll-down {
   position: relative; }
+  .holder-scroll-down .traco-scroll-down {
+    height: 1px;
+    width: 38px;
+    background: #ccc;
+    opacity: 0.4;
+    margin-left: 15px; }
+    @media only screen and (max-width: 1024px) {
+      .holder-scroll-down .traco-scroll-down {
+        display: none; } }
 
 .ctn-triggers {
   position: fixed;
@@ -507,7 +520,7 @@ video#bgvid {
     display: none; } }
 
 .s2 .box-photo, .s3 .box-photo, .s4 .box-photo, .s5 .box-photo {
-  background: #00466a; }
+  background: #003363; }
 
 .s2 .holder-infos, .s3 .holder-infos, .s4 .holder-infos, .s5 .holder-infos {
   margin-top: 0; }
@@ -541,9 +554,10 @@ video#bgvid {
         line-height: 42px; } }
     @media only screen and (min-width: 1025px) {
       .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
-        width: 74%;
+        width: 81%;
         font-size: 69px;
-        line-height: 58px; } }
+        line-height: 58px;
+        } }
     @media only screen and (min-width: 1800px) {
       .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
         font-size: 100px;
