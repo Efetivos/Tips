@@ -283,7 +283,7 @@ video.bgvid {
     .holder-infos {
         margin-top: 0vh;
        @include desk {
-           margin-top: 13vh;
+        margin-top: 38vh;
        }
    }
    
@@ -300,20 +300,29 @@ video.bgvid {
         width: 1020px;           
        }
 
-
-        .symbol-decor {
-            position: absolute;    
-            width: 73%;
+       .holder-decor {
+            width: 308px;
+            margin-left: -23%;
+            margin-top: -6%;
+            @include tablet {
+                width: 360px;
+            }
             @include desk {
-                margin-left: -15vw;
-                width: 55%;
-                margin-top: -5vh;            
+                right: auto;
+                width: 400px;
+                margin-left: -35%;                
             }
             @include hd {
-                margin-left: -36% !important;
+                width: 510px;                
+            }
+            .decor-line{
+                @include desk {
+                    margin-left: -15%;
+                    margin-top: 7%                    
+                }
             }
         }
-        
+            
         h1 {
             margin-left: 6vw;
             font-size: calc(40px + 54 * ((53vw + 53vh) - 520px) / 820);
@@ -321,10 +330,12 @@ video.bgvid {
                 font-size: calc(36px + 54 * ((45vw + 53vh) - 520px) / 820);
             }
             @include desk{
-                font-size: calc(41px + 54 * ((45vw + 53vh) - 520px) / 820);            
+                letter-spacing: -2px;
+                font-size: calc(46px + 54 * ((45vw + 53vh) - 520px) / 820);            
             }
             @include hd {
-                font-size: 82px;                
+                letter-spacing: -2px;
+                font-size: 95px;          
             }
         }
     }
