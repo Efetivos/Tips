@@ -8,8 +8,8 @@ var time = .6,
     pageIndic = $('.page-indicator');
 
 
-    function changeIndic (section) {
-        var myVar = section.slice(-1),
+    function changeInInit (section) {
+        let myVar = section.slice(-1),
             minus = myVar-1
             last = '.trg-dot'+minus
         TweenMax.staggerFromTo(section+' .numb', .8 , {cycle:{y:["20", "-20"]},opacity:0},{y:0, opacity:1},.2)
@@ -24,14 +24,34 @@ var time = .6,
     }
 
 
+    function changeInOut (sectionB) {
+        let myVar = sectionB.slice(-1);
+            myVar++
+            let last = '.trg-dot'+myVar;
+
+            console.log(sectionB)
+            console.log(myVar)
+            console.log(last)
+        TweenMax.staggerFromTo(sectionB+' .numb', .8 , {cycle:{y:["20", "-20"]},opacity:0},{y:0, opacity:1},.2)
+        TweenMax.fromTo(sectionB+' .line-trg',.6,{scaleX:0, transformOrigin:'left'},{scaleX:1})
+        TweenMax.fromTo(sectionB+' .trigger',.3,{opacity:1},{opacity:0})
+
+       // alert(lastPlus)
+        TweenMax.staggerFromTo(last+' .numb', .8 ,{y:0, opacity:1}, {cycle:{y:["20", "-20"]},opacity:0},.2)
+        TweenMax.fromTo(last+' .line-trg',.6,{scaleX:1},{scaleX:0, transformOrigin:'left'})
+        TweenMax.fromTo(last+' .trigger',1.2,{opacity:0},{opacity:1})
+        
+    }
+
+
     //var tlTrans = new TimelineMax({ id:'tlTrans'})
     var tlTrans = new TimelineMax({paused:true, id:'tlTrans'})
         .to('.s1 .box-photo', timeFader,{height:'0%', ease: Power3.easeInOut})
         .to('.s1 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},.4)
 
         // in s2
-        .add(function(){ pageIndic.text('SOBRE'); changeIndic('.trg-dot1'); })
-        .staggerFrom('.s2 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos')
+        .add(function(){ pageIndic.text('SOBRE');})
+        .staggerFrom('.s2 h1',time,{cycle:{y:["-20", "20"]},opacity:0, onStart:function(){  changeInInit('.trg-dot1');},  onReverseComplete: function(){ changeInOut('.trg-dot1');} },.2,'juntos')
         .from('.s2 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos')
         .from('.s2 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos')
 
@@ -42,17 +62,17 @@ var time = .6,
         .from('.s2 .line-up', time*1.2, { scaleX:0, transformOrigin:'left top',  ease: Power3.easeInOut},'juntos2+='+time)
         .from('.s2 .line-down', time*1.2, { scaleX:0, transformOrigin:'right top', ease: Power3.easeInOut},'juntos2+='+time)
         .from('.s2 p', time*2, {opacity:0},'juntos2+='+time*1.6)
-        .from('.s2 .link-page ', time*1.2, {opacity:0},'juntos2+='+time*1.6)
+        .from('.s2 .link-page ', time*1.2, {opacity:0 },'juntos2+='+time*1.6)
         
 
         .addPause()
         //out s2
-        .to('.s2 .box-photo', timeFader,{height:'0%', ease: Power3.easeInOut},'out2')
+        .to('.s2 .box-photo', timeFader,{height:'0%', ease: Power3.easeInOut },'out2')
         .to('.s2 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out2+=.2')
 
         // in s3
-        .add(function(){ pageIndic.text('QUEM SOMOS'); changeIndic('.trg-dot2'); })
-        .staggerFrom('.s3 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos3')
+        .add(function(){ pageIndic.text('QUEM SOMOS');})
+        .staggerFrom('.s3 h1',time,{cycle:{y:["-20", "20"]},opacity:0, onStart:function(){  changeInInit('.trg-dot2');},  onReverseComplete: function(){ changeInOut('.trg-dot1');} },.2,'juntos3')
         .from('.s3 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos3')
         .from('.s3 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos3')
 
@@ -74,8 +94,8 @@ var time = .6,
         .to('.s3 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out3+=.2')
 
         // in s4
-        .add(function(){ pageIndic.text('ESPECIALIDADES') ; changeIndic('.trg-dot3'); })
-        .staggerFrom('.s4 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos5')
+        .add(function(){ pageIndic.text('ESPECIALIDADES') ; })
+        .staggerFrom('.s4 h1',time,{cycle:{y:["-20", "20"]},opacity:0, onStart:function(){  changeInInit('.trg-dot3');},  onReverseComplete: function(){ changeInOut('.trg-dot2');} },.2,'juntos5')
         .from('.s4 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos5')
         .from('.s4 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos5')
 
@@ -97,8 +117,8 @@ var time = .6,
         .to('.s4 .holder-infos', time/1.3,{y:-100, autoAlpha:0, ease: Power3.easeInOut},'out4+=.2')
 
         // in s5
-        .add(function(){ pageIndic.text('NOSSO CONTATO') ; changeIndic('.trg-dot4'); })
-        .staggerFrom('.s5 h1',time,{cycle:{y:["-20", "20"]},opacity:0},.2,'juntos7')
+        .add(function(){ pageIndic.text('NOSSO CONTATO');})
+        .staggerFrom('.s5 h1',time,{cycle:{y:["-20", "20"]},opacity:0, onStart:function(){  changeInInit('.trg-dot4');},  onReverseComplete: function(){ changeInOut('.trg-dot3');}  },.2,'juntos7')
         .from('.s5 .line-triang', time*1.6, { drawSVG:"0%", ease: Power2.easeInOut},'juntos7')
         .from('.s5 .symbol', time*1.6, { opacity:0, yPercent: -20, ease: Power3.easeInOut},'juntos7')
 
