@@ -402,15 +402,12 @@ video.bgvid {
 
 
 //    <!-- -------------------- SECTION 2 -------------------- -->
-.s2 {
+.s2, .s3 , .s4 , .s5 {
 
     .box-photo {
-        background: $cor;
+        background: darken($cor,20%);
 
         .photo {
-            @include desk {
-                display: none;
-            }
         }
     }
 
@@ -452,7 +449,7 @@ video.bgvid {
                 line-height: 42px;                
             }
             @include desk {
-                width: 80%;
+                width: 74%;
                 font-size: 69px;
                 line-height:58px;                
             }
@@ -710,12 +707,12 @@ video.bgvid {
 
 
 
-$images: 1 2 3 4 5 6 7;
+$images: 3 4 5 6 7;
 @each $item in $images {
     .bp#{$item} .photo{
         background: url(https://unsplash.it/g/109#{$item}) center no-repeat;
         background-size: cover;
-        opacity: 0.7;
+        opacity: 0.6;
     }
 }
 

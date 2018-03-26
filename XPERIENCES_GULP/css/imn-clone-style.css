@@ -506,75 +506,72 @@ video#bgvid {
   .s1 .photo {
     display: none; } }
 
-.s2 .box-photo {
-  background: #0089d0; }
-  @media only screen and (min-width: 1025px) {
-    .s2 .box-photo .photo {
-      display: none; } }
+.s2 .box-photo, .s3 .box-photo, .s4 .box-photo, .s5 .box-photo {
+  background: #00466a; }
 
-.s2 .holder-infos {
+.s2 .holder-infos, .s3 .holder-infos, .s4 .holder-infos, .s5 .holder-infos {
   margin-top: 0; }
   @media only screen and (min-width: 1025px) {
-    .s2 .holder-infos {
+    .s2 .holder-infos, .s3 .holder-infos, .s4 .holder-infos, .s5 .holder-infos {
       margin-top: 7vh;
       margin-left: -5vw; } }
 
-.s2 .holder {
+.s2 .holder, .s3 .holder, .s4 .holder, .s5 .holder {
   width: 90vw; }
   @media only screen and (min-width: 580px) and (max-width: 1024px) {
-    .s2 .holder {
+    .s2 .holder, .s3 .holder, .s4 .holder, .s5 .holder {
       width: 65vw; } }
   @media only screen and (min-width: 1025px) {
-    .s2 .holder {
+    .s2 .holder, .s3 .holder, .s4 .holder, .s5 .holder {
       width: 60vw; } }
   @media only screen and (min-width: 1800px) {
-    .s2 .holder {
+    .s2 .holder, .s3 .holder, .s4 .holder, .s5 .holder {
       width: 50vw; } }
 
-.s2 .holder-h1 {
+.s2 .holder-h1, .s3 .holder-h1, .s4 .holder-h1, .s5 .holder-h1 {
   margin-top: 15px;
   margin-bottom: 27px; }
-  .s2 .holder-h1 h1 {
+  .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
     font-size: 42px;
     line-height: 33px; }
     @media only screen and (min-width: 580px) and (max-width: 1024px) {
-      .s2 .holder-h1 h1 {
+      .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
         width: 70%;
         font-size: calc(18px + 54 * ((53vw + 53vh) - 520px) / 820);
         line-height: 42px; } }
     @media only screen and (min-width: 1025px) {
-      .s2 .holder-h1 h1 {
-        width: 80%;
+      .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
+        width: 74%;
         font-size: 69px;
         line-height: 58px; } }
     @media only screen and (min-width: 1800px) {
-      .s2 .holder-h1 h1 {
+      .s2 .holder-h1 h1, .s3 .holder-h1 h1, .s4 .holder-h1 h1, .s5 .holder-h1 h1 {
         font-size: 100px;
         width: 81%;
         line-height: 82px; } }
 
-.s2 .line-scale {
+.s2 .line-scale, .s3 .line-scale, .s4 .line-scale, .s5 .line-scale {
   width: 100%;
   height: 1px;
   background: #fff;
   opacity: 0.4; }
 
-.s2 .holder-p {
+.s2 .holder-p, .s3 .holder-p, .s4 .holder-p, .s5 .holder-p {
   margin: 25px 0px; }
-  .s2 .holder-p p {
+  .s2 .holder-p p, .s3 .holder-p p, .s4 .holder-p p, .s5 .holder-p p {
     font-size: 15px;
     text-align: justify;
     line-height: 21px; }
     @media only screen and (min-width: 1025px) {
-      .s2 .holder-p p {
+      .s2 .holder-p p, .s3 .holder-p p, .s4 .holder-p p, .s5 .holder-p p {
         width: 57%;
         line-height: 27px;
         opacity: 0.7; } }
     @media only screen and (min-width: 1800px) {
-      .s2 .holder-p p {
+      .s2 .holder-p p, .s3 .holder-p p, .s4 .holder-p p, .s5 .holder-p p {
         width: 42%; } }
 
-.s2 button.link-page {
+.s2 button.link-page, .s3 button.link-page, .s4 button.link-page, .s5 button.link-page {
   border: none;
   background-image: none;
   background-color: transparent;
@@ -585,47 +582,37 @@ video#bgvid {
   width: 100%;
   justify-content: flex-start;
   margin-top: 23px; }
-  .s2 button.link-page a {
+  .s2 button.link-page a, .s3 button.link-page a, .s4 button.link-page a, .s5 button.link-page a {
     color: #fff;
     font-size: 13px;
     margin-right: 20px; }
-  .s2 button.link-page img.arrow-go-page {
+  .s2 button.link-page img.arrow-go-page, .s3 button.link-page img.arrow-go-page, .s4 button.link-page img.arrow-go-page, .s5 button.link-page img.arrow-go-page {
     width: 10px; }
-
-.bp1 .photo {
-  background: url(https://unsplash.it/g/1091) center no-repeat;
-  background-size: cover;
-  opacity: 0.7; }
-
-.bp2 .photo {
-  background: url(https://unsplash.it/g/1092) center no-repeat;
-  background-size: cover;
-  opacity: 0.7; }
 
 .bp3 .photo {
   background: url(https://unsplash.it/g/1093) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp4 .photo {
   background: url(https://unsplash.it/g/1094) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp5 .photo {
   background: url(https://unsplash.it/g/1095) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp6 .photo {
   background: url(https://unsplash.it/g/1096) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .bp7 .photo {
   background: url(https://unsplash.it/g/1097) center no-repeat;
   background-size: cover;
-  opacity: 0.7; }
+  opacity: 0.6; }
 
 .gs-dev-tools {
   z-index: 99999;
