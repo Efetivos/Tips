@@ -90,14 +90,14 @@ var bp1 = $('.bp1'), //primeiro box-photo
         if (e.keyCode == 37 && !animating && !bp1.hasClass('active')) { // hasClass verifica se tem a class Active
             animating = true;
             count--
-            $('.box-photo-galeria-lb').removeClass('active');
-            $('.ctn-slide-lightbox .bp' + count).addClass('active');
+            $('.box-photo-galeria-lb').removeClass('active'); // remove class Active de todas as bp
+            $('.ctn-slide-lightbox .bp' + count).addClass('active'); // adiciona class Active na photo Current
         }
 
         if (e.keyCode == 39 && !animating && !lastBp.hasClass('active')) { // hasClass verifica se tem a class Active
             animating = true;
             count++
-            $('.box-photo-galeria-lb').removeClass('active');
-            $('.ctn-slide-lightbox .bp' + count).addClass('active');
+            $('.box-photo-galeria-lb').removeClass('active'); // remove class Active de todas as bp
+            $('.ctn-slide-lightbox .bp' + count).addClass('active'); // adiciona class Active na photo Current
         }
 */

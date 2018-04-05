@@ -1,0 +1,5 @@
+@import'normal-reset'; @import 'balao-magico-alias-mixins';
+body {
+    overflow: hidden;
+    background: $cor;
+}
